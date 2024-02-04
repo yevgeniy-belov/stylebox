@@ -1,0 +1,114 @@
+
+// Media queries breakpoints
+// --------------------------------------------------
+
+// Extra small screen / phone
+@screen-xs                          : 480px;
+@screen-phone                       : @screen-xs;
+
+// Small screen / tablet
+@screen-sm                          : 768px;
+@screen-tablet                      : @screen-sm;
+
+// Medium screen / desktop
+@screen-md                          : 876px;
+@screen-desktop                     : @screen-md;
+
+// Large screen / wide desktop
+@screen-lg                          : 1200px;
+@screen-lg-desktop                  : @screen-lg;
+
+// Extra large screen / wide desktop
+@screen-xl                          : 1600px;
+@screen-xl-desktop                  : @screen-xl;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max                      : (@screen-sm - 1);
+@screen-sm-max                      : (@screen-md - 1);
+@screen-md-max                      : (@screen-lg - 1);
+
+
+
+@xs-max-height          : 400px;
+@sm-max-height          : 600px;
+@md-max-height          : 800px;
+@lg-max-height          : 1000px;
+//  "xl" height is above the "lg" height to infinite.
+
+@xs-max-width           : 768px;
+@sm-max-width           : 992px;
+@md-max-width           : 1280px;
+@lg-max-width           : 1600px;
+//  "xl" width is above the "lg" width to infinite.
+
+@sm-min-height          : @xs-max-height;
+@md-min-height          : @sm-max-height;
+@lg-min-height          : @md-max-height;
+@xl-min-height          : @lg-max-height;
+
+@sm-min-width           : (@xs-max-width + 1);
+@md-min-width           : (@sm-max-width + 1);
+@lg-min-width           : (@md-max-width + 1);
+@xl-min-width           : (@lg-max-width + 1);
+
+//  Choose names for screen size ranges.
+//  Example             : "desktop__", "tablet__", "laptop__" etc.
+@screen-size-name--xl   : xl__;
+@screen-size-name--lg   : lg__;
+@screen-size-name--md   : md__;
+@screen-size-name--sm   : sm__;
+@screen-size-name--xs   : xs__;
+
+@screen-width-name--xl  : width--xl__;
+@screen-width-name--lg  : width--lg__;
+@screen-width-name--md  : width--md__;
+@screen-width-name--sm  : width--sm__;
+@screen-width-name--xs  : width--xs__;
+
+@screen-height-name--xl : height--xl__;
+@screen-height-name--lg : height--lg__;
+@screen-height-name--md : height--md__;
+@screen-height-name--sm : height--sm__;
+@screen-height-name--xs : height--xs__;
+
+@screen-size--xl        : ~"(min-height: @{xl-min-height}) and (min-width: @{xl-min-width})";
+@screen-size--lg        : ~"(min-height: @{lg-min-height}) and (min-width: @{lg-min-width})";
+@screen-size--md        : ~"(min-height: @{md-min-height}) and (min-width: @{md-min-width})";
+@screen-size--sm        : ~"(min-height: @{sm-min-height}) and (min-width: @{sm-min-width})";
+@screen-size--xs        : ~"(max-height: @{xs-max-height}), (max-width: @{xs-max-width})";
+
+@screen-size--max--xl   : ~"(max-height: @{xl-min-height}) and (max-width: @{xl-min-width})";
+@screen-size--max--lg   : ~"(max-height: @{lg-max-height}) and (max-width: @{lg-max-width})";
+@screen-size--max--md   : ~"(max-height: @{md-max-height}) and (max-width: @{md-max-width})";
+@screen-size--max--sm   : ~"(max-height: @{sm-max-height}) and (max-width: @{sm-max-width})";
+@screen-size--max--xs   : ~"(max-height: @{xs-max-height}), (max-width: @{xs-max-width})";
+
+@screen-size--min--xl   : ~"(min-height: @{xl-min-height}) and (min-width: @{xl-min-width})";
+@screen-size--min--lg   : ~"(min-height: @{lg-min-height}) and (min-width: @{lg-min-width})";
+@screen-size--min--md   : ~"(min-height: @{md-min-height}) and (min-width: @{md-min-width})";
+@screen-size--min--sm   : ~"(min-height: @{sm-min-height}) and (min-width: @{sm-min-width})";
+@screen-size--min--xs   : ~"(min-height: @{xs-max-height}), (min-width: @{xs-max-width})";
+
+@screen-width--xl       : ~"(min-width: @{xl-min-width})";
+@screen-width--lg       : ~"(min-width: @{lg-min-width})";
+@screen-width--md       : ~"(min-width: @{md-min-width})";
+@screen-width--sm       : ~"(min-width: @{sm-min-width})";
+@screen-width--xs       : ~"(max-width: @{xs-max-width})";
+
+@screen-width--max--xl  : ~"(max-width: @{xl-min-width})";
+@screen-width--max--lg  : ~"(max-width: @{lg-max-width})";
+@screen-width--max--md  : ~"(max-width: @{md-max-width})";
+@screen-width--max--sm  : ~"(max-width: @{sm-max-width})";
+@screen-width--max--xs  : ~"(max-width: @{xs-max-width})";
+
+@screen-height--xl      : ~"(min-height: @{xl-min-height})";
+@screen-height--lg      : ~"(min-height: @{lg-min-height})";
+@screen-height--md      : ~"(min-height: @{md-min-height})";
+@screen-height--sm      : ~"(min-height: @{sm-min-height})";
+@screen-height--xs      : ~"(max-height: @{xs-max-height})";
+
+@screen-height--max--xl : ~"(max-height: @{xl-min-height})";
+@screen-height--max--lg : ~"(max-height: @{lg-max-height})";
+@screen-height--max--md : ~"(max-height: @{md-max-height})";
+@screen-height--max--sm : ~"(max-height: @{sm-max-height})";
+@screen-height--max--xs : ~"(max-height: @{xs-max-height})";

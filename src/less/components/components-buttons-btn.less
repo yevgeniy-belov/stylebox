@@ -1,0 +1,88 @@
+.btn {
+	border-radius: 2px;
+	font-family: @font--base;
+	.inline-flex;
+	font-weight: var(--font-weight-controls);
+	.centerize;
+	text-align: center;
+	padding: @btn-v-spacing @btn-h-spacing;
+	line-height: 1em;
+	color: var(--color-text-weak);
+	cursor: default;
+	border: 1px solid var(--color-border-medium);
+	white-space: nowrap;
+	.bg--content;
+	.user-select--none;
+	&:focus-visible,
+	&.focus {
+        z-index: 10;
+        .relative;
+		&:before {
+            // ":before" is used here and ":after" is used for dividers inside button groups.
+			content: '';
+			.block;
+			.absolute;
+			top: -4px;
+			bottom: -4px;
+			left: -4px;
+			right: -4px;
+			border-radius: 3px;
+            border: 2px solid var(--color-primary);
+            opacity: .7;
+            // box-shadow: 0 0 0 2px white;
+		}
+	}
+	.btn--inverted& {
+		.text-color-inverted--medium;
+	}
+	&:hover,
+	&.hover {
+		.text-color--strong;
+		text-decoration: none;
+		.btn--inverted& {
+			.text-color-inverted--strong;
+		}
+	}
+	&:active,
+    &.active,
+    &.selected,
+    &.open
+     {
+		.text-color--strongest;
+		.btn--inverted& {
+			.text-color-inverted--strongest;
+		}
+		background-color: var(--color-engrave);
+		background-image: none;
+		.btn--toggle& {
+			.bg--selected;
+		}
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: not-allowed;
+		.opacity--medium;
+		&:hover,
+		&:active,
+		&:focus-visible {
+			.text-color--medium;
+			.opacity--medium;
+		}
+	}
+	&.btn--text--opposite {
+		color: var(--color-opposite);
+		&:hover,
+		&:active,
+		&:focus-visible {
+			color: var(--color-opposite);
+		}
+	}
+	&--flex {
+		.flex;
+	}
+
+	label& {
+		font-weight: normal;
+	}
+}

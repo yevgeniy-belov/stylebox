@@ -1,0 +1,737 @@
+* {
+    text-rendering: geometricPrecision !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+@keyframes text-colors-loop {
+    0% {
+        color: var(--color-text-strongest)
+    }
+    20% {
+        color: var(--color-text-strong)
+    }
+    40% {
+        color: var(--color-text-medium)
+    }
+    60% {
+        color: var(--color-text-weak)
+    }
+    80% {
+        color: var(--color-text-weakest)
+    }
+}
+
+.rtl {
+    direction: rtl;
+}
+
+
+.text-colors-loop {
+    animation-name: text-colors-loop;
+    animation-duration: 5s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes text-colors-inverted-loop {
+    0% {
+        color: var(--color-text-inverted-strongest)
+    }
+    20% {
+        color: var(--color-text-inverted-strong)
+    }
+    40% {
+        color: var(--color-text-inverted-medium)
+    }
+    60% {
+        color: var(--color-text-inverted-weak)
+    }
+    80% {
+        color: var(--color-text-inverted-weakest)
+    }
+}
+
+.text-colors-inverted-loop {
+    animation-name: text-colors-inverted-loop;
+    animation-duration: 5s;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+}
+
+.text-html {
+    font-family: @font--base;
+    line-height: 1.5em;
+    font-size: @font-size-base;
+    .text-color--medium;
+}
+html{
+    .text-html;
+}
+
+label {
+    font-weight: normal;
+}
+
+a {
+    color: var(--link-color);
+}
+
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+.anchor--not-link {
+    .text-color--medium;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+b {
+    font-family: @font--bold;
+}
+
+p {
+    margin: 0 0 (@line-height-computed / 2);
+}
+
+.lead {
+    margin-bottom: @line-height-computed;
+    font-size: calc(var(--font-size-base) * 1.15);
+    font-weight: 200;
+    line-height: 1.4;
+    @media (min-width: 768px) {
+        font-size: calc(var(--font-size-base) * 1.5);
+    }
+}
+
+// Emphasis & misc
+// -------------------------
+// Ex: 14px base font * 85% = about 12px
+small {
+    font-size: 85%;
+}
+
+// Undo browser default styling
+cite {
+    font-style: normal;
+}
+
+.text-muted {
+    color: @text-muted;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: @headings-font-family;
+    font-weight: @headings-font-weight;
+    line-height: @headings-line-height;
+    small {
+        font-weight: normal;
+        line-height: 1;
+        color: @headings-small-color;
+    }
+}
+
+h1,
+h2,
+h3 {
+    margin-top: @line-height-computed;
+    margin-bottom: (@line-height-computed / 2);
+}
+
+h4,
+h5,
+h6 {
+    margin-top: (@line-height-computed / 2);
+    margin-bottom: (@line-height-computed / 2);
+}
+
+h1,
+.h1 {
+    font-size: calc(var(--font-size-base) * 2.60);
+} // ~36px
+h2,
+.h2 {
+    font-size: calc(var(--font-size-base) * 2.15);
+} // ~30px
+h3,
+.h3 {
+    font-size: calc(var(--font-size-base) * 1.70);
+} // ~24px
+h4,
+.h4 {
+    font-size: calc(var(--font-size-base) * 1.25);
+} // ~18px
+h5,
+.h5 {
+    font-size: var(--font-size-base);
+}
+
+h6,
+.h6 {
+    font-size: calc(var(--font-size-base) * 0.85);
+}
+
+
+// Page header
+// -------------------------
+.page-header {
+    padding-bottom: ((@line-height-computed / 2) - 1);
+    margin: (@line-height-computed * 2) 0 @line-height-computed;
+    border-bottom: 1px solid @page-header-border-color;
+}
+
+// MISC
+// ----
+// Abbreviations and acronyms
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+    cursor: help;
+    border-bottom: 1px dotted @abbr-border-color;
+}
+
+abbr.initialism {
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+    padding: (@line-height-computed / 2) @line-height-computed;
+    margin: 0 0 @line-height-computed;
+    border-left: 5px solid @blockquote-border-color;
+    p {
+        font-size: calc(var(--font-size-base) * 1.25);
+        font-weight: 300;
+        line-height: 1.25;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    small {
+        display: block;
+        line-height: @line-height-base;
+        color: @blockquote-small-color;
+        &:before {
+            content: '\2014 \00A0'; // EM DASH, NBSP
+        }
+    } // Float right with text-align: right
+    &.pull-right {
+        padding-right: 15px;
+        padding-left: 0;
+        border-right: 5px solid @blockquote-border-color;
+        border-left: 0;
+        p,
+        small {
+            text-align: right;
+        }
+        small {
+            &:before {
+                content: '';
+            }
+            &:after {
+                content: '\00A0 \2014'; // NBSP, EM DASH
+            }
+        }
+    }
+}
+
+// Quotes
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+}
+
+// Addresses
+address {
+    display: block;
+    margin-bottom: @line-height-computed;
+    font-style: normal;
+    line-height: @line-height-base;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+//**********************************************************************
+// @font-face {
+//     font-family: '@{font-family} Thin';
+//     src: url('@{path-to-fonts}@{font-family}-Web-ThinWeb.woff2'),
+// }
+
+// @font-face {
+//     font-family: '@{font-family} Light';
+//     src: url('@{path-to-fonts}@{font-family}-Web-LightWeb.woff2'),
+// }
+
+// @font-face {
+//     font-family: '@{font-family} Regular';
+//     src: url('@{path-to-fonts}@{font-family}-Web-RegularWeb.woff2'),
+// }
+
+// @font-face {
+//     font-family: '@{font-family} Medium';
+//     src: url('@{path-to-fonts}@{font-family}-Web-MediumWeb.woff2'),
+// }
+
+// @font-face {
+//     font-family: '@{font-family} Semibold';
+//     src: url('@{path-to-fonts}@{font-family}-Web-SemiboldWeb.woff2'),
+// }
+
+// @font-face {
+//     font-family: '@{font-family} Bold';
+//     src: url('@{path-to-fonts}@{font-family}-Web-BoldWeb.woff2'),
+// }
+
+// @font-face {
+//     font-family: '@{font-family} Black';
+//     src: url('@{path-to-fonts}@{font-family}-Web-BlackWeb.woff2'),
+// }
+
+//
+/*
+********************************
+*/
+
+.text-anchor--middle {
+    text-anchor: middle;
+}
+
+.v-align--text-top {
+    vertical-align: text-top;
+}
+
+.vertical-align--top {
+    vertical-align: top;
+}
+
+.text-color--opposite {
+    color: var(--color-text-opposite)
+}
+
+// .color--gray-weak {
+//     color: @gray--weak;
+// }
+.color--primary,
+.btn span.color--primary {
+    //TODO: Remove the span chain;
+    color: var(--color-primary);
+}
+
+a {
+    &:not(:hover) {
+        text-decoration: none;
+    }
+    &.navigation__item:hover {
+        text-decoration: none;
+    }
+}
+
+.text--align-right {
+    text-align: right;
+}
+
+.text--align-left {
+    text-align: left;
+}
+
+.text--align-center {
+    text-align: center;
+}
+
+.link {
+    cursor: pointer;
+    color: darken(#0096d6, 5%);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.text--compact {
+    line-height: 1em;
+}
+
+.text--bold {
+    font-family: @font--bold;
+}
+
+.text--extra-bold {
+    font-family: @font--extra-bold;
+}
+
+.text--xxs {
+    font-size: @text--xxs;
+    line-height: 1.5em;
+}
+
+.text--xs {
+    font-size: @text--xs;
+    line-height: 1.5em;
+}
+
+.text--sm {
+    font-size: @text--sm;
+    line-height: 1.5em;
+}
+
+.text--md {
+    font-size: @text--md;
+    line-height: 1.5em;
+}
+
+.text--lg {
+    font-size: @text--lg;
+    line-height: 1.5em;
+}
+
+.text--xl {
+    font-size: @text--xl;
+    line-height: 1.5em;
+}
+
+.text--xxl {
+    font-size: @text--xxl;
+    line-height: 1.5em;
+}
+
+.text--3xl {
+    font-size: @text--3xl;
+    line-height: 1.5em;
+}
+
+.text--4xl {
+    font-size: @text--4xl;
+    line-height: 1.5em;
+}
+
+.text--5xl {
+    font-size: @text--5xl;
+    line-height: 1.5em;
+}
+
+.title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.1em;
+    .flex(1,
+    1,
+    auto);
+}
+
+.title--xs {
+    .text--xs;
+    &:extend(.grow--1);
+}
+
+.title--sm {
+    .text--sm;
+    &:extend(.grow--1);
+}
+
+.title--md {
+    .text--md;
+    &:extend(.grow--1);
+}
+
+.title--lg {
+    .text--lg;
+    &:extend(.grow--1);
+}
+
+.title--xl {
+    .text--xl;
+    &:extend(.grow--1);
+}
+
+.title--xxl {
+    .text--xxl;
+    &:extend(.grow--1);
+}
+
+.title--3xl {
+    .text--3xl;
+    &:extend(.grow--1);
+}
+
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-color--primary {
+    color: var(--color-primary);
+    fill: var(--color-primary);
+}
+
+.text-color--secondary {
+    color: var(--color-secondary);
+    fill: var(--color-secondary);
+}
+
+.text-color--info {
+    color: var(--color-info);
+    fill: var(--color-info);
+}
+
+.text-color--error {
+    color: var(--color-error);
+    fill: var(--color-error);
+}
+
+.text-color--alert {
+    color: var(--color-warning);
+    fill: var(--color-warning);
+}
+.text-color--success {
+    color: var(--color-success);
+    fill: var(--color-success);
+}
+
+.text-color--strongest {
+    color: var(--color-text-strongest);
+    fill: var(--color-text-strongest)
+}
+
+.text-color--strong {
+    color: var(--color-text-strong);
+    fill: var(--color-text-strong)
+}
+
+.text-color--medium {
+    color: var(--color-text-medium);
+    fill: var(--color-text-medium)
+}
+
+.text-color--weak {
+    color: var(--color-text-weak);
+    fill: var(--color-text-weak)
+}
+
+.text-color--weakest {
+    color: var(--color-text-weakest);
+    fill: var(--color-text-weakest)
+}
+
+.text-color-inverted--strongest {
+    color: var(--color-text-inverted-strongest);
+    fill: var(--color-text-inverted-strongest)
+}
+
+.text-color-inverted--strong {
+    color: var(--color-text-inverted-strong);
+    fill: var(--color-text-inverted-strong);
+}
+
+.text-color-inverted--medium {
+    color: var(--color-text-inverted-medium);
+    fill: var(--color-text-inverted-medium);
+}
+
+.text-color-inverted--weak {
+    color: var(--color-text-inverted-weak);
+    fill: var(--color-text-inverted-weak);
+}
+
+.text-color-inverted--weakest {
+    color: var(--color-text-inverted-weakest);
+    fill: var(--color-text-inverted-weakest);
+}
+
+.text--centered {
+    text-align: center;
+}
+
+.font--thin {
+    font-family: @font--thin;
+    font-weight: 200;
+}
+
+.font--light {
+    font-family: @font--light;
+    font-weight: 300;
+}
+
+.font--regular {
+    font-family: @font--regular;
+    font-weight: 400;
+}
+
+.font--medium {
+    font-family: @font--medium;
+    font-weight: 500;
+}
+
+.font--semibold {
+    font-family: @font--semibold;
+    font-weight: 600;
+}
+
+.font--MetricHPE-Web-Semibold {
+    font-family: "MetricHPE-Web-Semibold";
+}
+
+.font--bold {
+    font-family: @font--bold;
+    font-weight: 700;
+}
+
+.font--black {
+    font-family: @font--extra-bold;
+    font-weight: 700;
+}
+
+.align--right {
+    text-align: right;
+}
+
+.line-height--xs {
+    line-height: 1em;
+}
+
+.line-height--sm {
+    line-height: 1.3em;
+}
+
+.line-height--md {
+    line-height: 1.6em;
+}
+
+.line-height--lg {
+    line-height: 2em;
+}
+
+.text--monospace {
+    font-family: monospace;
+    &.text--bold {
+        font-weight: bold;
+    }
+}
+
+.text--uppercase {
+    text-transform: uppercase; // font-size: @text-size-uppercase;
+}
+
+.text--capitalize {
+    text-transform: capitalize;
+}
+
+.text-color--active {
+    color: var(--color-text-active);
+}
+
+.white-space--nowrap {
+    white-space: nowrap
+}
+
+.white-space--normal {
+    white-space: normal;
+}
+
+.white-space--pre-line {
+    white-space: pre-line;
+}
+
+.textarea--resize--none {
+    resize: none;
+}
+
+.text-color--primary {
+    color: var(--color-primary);
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+// --------------
+.link,
+// Temporal specifity escalation to trump
+// existing class that should be fixed.
+.link:not(:hover) {
+    //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    text-decoration: underline;
+}
+
+// --------------
+.font--mali {
+    font-family: 'Mali';
+    &.font--thin {
+    font-weight: 200
+}
+
+    &.font--light {
+    font-weight: 300
+}
+
+    &.font--regular {
+    font-weight: 400
+}
+
+    &.font--medium {
+    font-weight: 500
+}
+
+    &.font--semibold {
+    font-weight: 600
+}
+
+    &.font--bold {
+    font-weight: 700
+}
+
+    &.font--black {
+    font-weight: 700
+}
+}
+.text--interactive {
+    &:hover,
+    &.hover {
+        .text-color--strong;
+    }
+    &:active,
+    &.active {
+        .text-color--strongest;
+    }
+    &.selected,
+    &.open {
+        .text-color--primary;
+    }
+}

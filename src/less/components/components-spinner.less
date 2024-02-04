@@ -1,0 +1,28 @@
+@keyframes spin-loader-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spin-loader {
+    .square--xxs;
+    position: relative;
+    .animation(spin-loader-rotation,1s,0,cubic-bezier(.4,0,.2,1));
+    animation-iteration-count: infinite;
+
+    &:after {
+        .radius--full;
+        content: "";
+        .absolute-stretch;
+        border-top: 2px solid var(--color-border-weak);
+        border-right: 2px solid var(--color-border-weak);
+        border-bottom: 2px solid var(--color-border-weak);
+        border-left: 2px solid var(--color-info);
+        .animation(spin-loader-rotation,2s,0,linear);
+        animation-iteration-count: infinite;
+    }
+}

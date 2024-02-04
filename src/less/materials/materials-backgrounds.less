@@ -1,0 +1,175 @@
+.bg--black {.bg(black)}
+// .bg--content {
+//     background-color: var(--color-content);
+//     fill: var(--color-content);
+//     }
+// .bg--aside {
+//     background-color: var(--color-aside);
+//     fill: var(--color-aside);
+//     }
+// .bg--canvas {
+//     background-color: var(--color-canvas);
+//     fill: var(--color-canvas);
+//     }
+.bg--content {.bg(content)}
+.bg--aside {.bg(aside)}
+.bg--canvas {.bg(canvas)}
+.bg--brand {.bg(primary)}
+.bg--primary {.bg(primary)}
+.bg--secondary {.bg(secondary)}
+.bg--tertiary {.bg(tertiary)}
+.bg--error {.bg(error)}
+.bg--success {.bg(success)}
+.bg--alert,
+.bg--warning {.bg(warning)}
+.bg--info {.bg(info)}
+.bg--standout {.bg(standout)}
+.bg--accent {.bg(accent)}
+.bg--active {.bg(active)}
+
+.bg--pressed{
+    background-color: var(--color-pressed);
+}
+.bg--hover-strong{
+    background-color: var(--color-hover-strong);
+}
+.bg--hover{
+    background-color: var(--color-hover);
+}
+.bg--hover-weak{
+    background-color: var(--color-hover-weak);
+}
+.bg--selected {
+	background-color: var(--color-selected-opacity-medium);
+}
+.bg--content-charts{
+	background-color: var(--color--content-charts);
+}
+.bg--hover--content {
+	&.is--hover,
+	&:hover {
+		.bg--content;
+	}
+}
+.bg--temporary {
+    .bg--temporary--medium;
+}
+.generate-bg--temporary(@strength; @angle: 45deg; @size: 20px) {
+    .bg--temporary--@{strength}{
+        @modified-color: ~"var(--color-border-@{strength})";
+        background-size: @size @size;
+        background-image: 
+        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, @modified-color), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, @modified-color), color-stop(.75, @modified-color), color-stop(.75, transparent), to(transparent));
+        background-image: -webkit-linear-gradient(@angle, @modified-color 25%, transparent 25%, transparent 50%,@modified-color 50%, @modified-color 75%, transparent 75%, transparent);
+        background-image: -moz-linear-gradient(@angle, @modified-color 25%, transparent 25%, transparent 50%, @modified-color 50%, @modified-color 75%, transparent 75%, transparent);
+
+        background-image: linear-gradient(@angle, @modified-color 25%, transparent 25%, transparent 50%, @modified-color 50%, @modified-color 75%, transparent 75%);
+    }
+}
+.generate-bg--temporary(weakest, -45deg, 4px);
+.generate-bg--temporary(weaker, -45deg, 4px);
+.generate-bg--temporary(weak, -45deg, 4px);
+.generate-bg--temporary(medium, -45deg, 4px);
+.generate-bg--temporary(strong, -45deg, 4px);
+.generate-bg--temporary(stronger, -45deg, 4px);
+.generate-bg--temporary(strongest, -45deg, 4px);
+
+.bg-matrix (@size; @color) {
+    background-image:
+    linear-gradient(45deg, @color 25%, transparent 25%),
+    linear-gradient(-45deg, @color 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, @color 75%),
+    linear-gradient(-45deg, transparent 75%, @color 75%);
+    background-size: calc(@size * 2px) calc(@size * 2px);
+    background-position: calc(@size * 1px) 0px, 0px calc(@size * 2px), 0px calc(@size * -1px), calc(@size * -1px) calc(@size * -1px);
+}
+.bg--draggable {
+    .bg-matrix(1, var(--color-border-medium));
+}
+
+.bg--veil {
+	&:before {
+		content: "";
+		.absolute-stretch;
+		.bg--temporary;
+		background-color: var(--color-aside);
+		opacity: 0.5;
+	}
+}
+
+.bg--engrave {background-color: var(--color-engrave)}
+.bg--backdrop {background-color: var(--color-backdrop)}
+
+.bg-alpha--weakest{
+    --bg-a: 86%;
+}
+.bg-alpha--weaker{
+    --bg-a: 74%;
+}
+.bg-alpha--weak{
+    --bg-a: 62%;
+}
+.bg-alpha--medium{
+    --bg-a: 50%;
+}
+.bg-alpha--strong{
+    --bg-a: 38%;
+}
+.bg-alpha--stronger{
+    --bg-a: 26%;
+}
+.bg-alpha--strongest{
+    --bg-a: 14%;
+}
+
+.bg-alpha--weakest{
+    --bg-a: 86%;
+
+}
+// Lightness
+.bg-lightness--lightest{
+    --bg-l-m: 1.6;
+}
+.bg-lightness--lighter{
+    --bg-l-m: 1.4;
+}
+.bg-lightness--light{
+    --bg-l-m: 1.2;
+}
+.bg-lightness--medium{
+    --bg-l-m: 1;
+}
+.bg-lightness--dark{
+    --bg-l-m: .8;
+}
+.bg-lightness--darker{
+    --bg-l-m: .6;
+}
+.bg-lightness--darkest{
+    --bg-l-m: .4;
+}
+
+
+// Color
+.color-alpha--weakest{
+    --color-a: 86%;
+
+}
+.color-alpha--weaker{
+    --color-a: 74%;
+}
+.color-alpha--weak{
+    --color-a: 62%;
+}
+.color-alpha--medium{
+    --color-a: 50%;
+}
+.color-alpha--strong{
+    --color-a: 38%;
+}
+.color-alpha--stronger{
+    --color-a: 26%;
+}
+.color-alpha--strongest{
+    --color-a: 14%;
+}

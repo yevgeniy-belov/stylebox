@@ -1,0 +1,61 @@
+<div class="padding--xl">
+
+    <div class="bg--content padding--xl margin-b--xl">
+        <div class="" ng-repeat="(fontFamily, value) in typographyData.fontFamilies">
+            <div class="flex" ng-repeat="size in typographyData.sizes">
+                <div class="font--{{weight}} text--{{size}}" ng-repeat="weight in value.weights">M</div>
+            </div>
+        </div>
+    </div>
+    <div class=" grid grid--guttered--lg" ng-repeat="(fontFamily, value) in typographyData.fontFamilies">
+        <div class=" grid__item col--sm--2" ng-repeat="weight in value.weights">
+            <div class=" grid grid--guttered--xs">
+                <div class="bg--content grid__item font--{{weight}} text--{{size}}" ng-repeat="size in typographyData.sizes">
+                    <div class="bg--aside"> {{weight}} / {{size}} </div>
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ipsam ut quae soluta molestias, ad!</div>
+            </div>
+        </div>
+    </div>
+    <!-- ************************************************************* -->
+    <div class="grid">
+        <div class="grid__item" ng-repeat="(fontFamily, value) in typographyData.fontFamilies">
+            <div class="grid grid--guttered--xs">
+                <div class="grid__item col--sm--4 col--md--3 col--lg--2" ng-repeat="weight in value.weights">
+                    <div class="bg--content">
+                        <div class="text--capitalize bg--accent text-color--opposite text-block padding--sm ">{{weight}}</div>
+                        <div class="padding--sm">
+                            <div class="font--{{weight}} text--{{size}} text-block *bg--content margin-b--md bg--aside" ng-repeat="size in typographyData.sizes">
+                                <div class="text-block__text ellipsis"> Type </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <div class="grid grid--guttered--sm">
+                        <div class="grid__item" ng-repeat="weight in value.weights">
+                            <div class="grid grid--guttered--xs">
+                                <div class="grid__item col--sm--6">
+                                    <div class="bg--accent text-color--opposite text-block padding--sm  text--capitalize">{{weight}}</div>
+                                    <div class="padding--sm bg--content">
+                                        <div class="font--{{weight}} text--{{size}} text-block *bg--content margin-b--md bg--aside" ng-repeat="size in typographyData.sizes">
+                                            <div class="text-block__text ellipsis text--capitalize"> {{strings.alphabet}} </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__item col--sm--6">
+                                    <div class=" bg--accent text-color--opposite text-block padding--sm  text--capitalize">{{weight}} Capitals</div>
+                                    <div class="padding--sm bg--content">
+                                        <div class="font--{{weight}} text--{{size}} text-block *bg--content margin-b--md bg--aside" ng-repeat="size in typographyData.sizes">
+                                            <div class="text-block__text ellipsis text--uppercase"> {{strings.alphabet}} </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

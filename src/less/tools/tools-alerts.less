@@ -1,0 +1,17 @@
+.alert-variant(@color) {
+    background-color: ~"var(--color-@{color}-opacity-strongest)";
+    .relative;
+    color: var(--color-text-medium);
+    &:after{
+        z-index: -1;
+        content: "";
+        .block;
+        .bg--content;
+        .absolute-stretch;
+    }
+    .border;
+    .border--weaker;
+    hr {
+        border-top-color: ~"var(--color-@{color}-opacity-weakest)";;
+    }
+}

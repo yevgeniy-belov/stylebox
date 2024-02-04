@@ -1,0 +1,158 @@
+:root {
+
+    &.sketch,
+    .sketch {
+        .text-block {
+
+            &.text--xxs {
+                .pseudo-margins(7, 4);
+            }
+
+            &.text--xs {
+                .pseudo-margins(7, 4);
+            }
+
+            &.text--sm {
+                .pseudo-margins(8, 5);
+            }
+
+            &.text--md {
+                .pseudo-margins(9, 6);
+            }
+
+            &.text--lg {
+                .pseudo-margins(11, 6);
+            }
+
+            &.text--xl {
+                .pseudo-margins(14, 8);
+            }
+
+            &.text--xxl {
+                .pseudo-margins(15, 9);
+            }
+
+            &.text--3xl {
+                .pseudo-margins(21, 12);
+            }
+
+            &.text--4xl {
+                .pseudo-margins(28, 15);
+            }
+
+            &.text--5xl {
+                .pseudo-margins(36, 20);
+            }
+
+        }
+
+        // --text-xxs: 10px;
+        // --text-xs: 11px;
+        // --text-sm: 12px;
+        // --text-md: 14px;
+        // --text-lg: 16px;
+        // --text-xl: 20px;
+        // --text-xxl: 24px;
+        // --text-3xl: 32px;
+        // --text-4xl: 44px;
+        // --text-5xl: 60px;
+        //
+        --link-color: var(--color-info);
+        --mark-hue: 0;
+        --mark-saturation: 0%;
+        --mark-lightness: 0%;
+        --h-primary: 200;
+        --h-success: 120;
+        --h-selected: 180;
+        --h-warning: 40;
+        --h-info: 180;
+        --h-secondary: 0;
+        --h-error: 0;
+        --h-standout: 290;
+        //
+        --s-primary: 50%;
+        --s-success: 50%;
+        --s-selected: 50%;
+        --s-warning: 50%;
+        --s-info: 50%;
+        --s-secondary: 0%;
+        --s-error: 50%;
+        --s-standout: 50%;
+        --s-selected: 85%;
+        //
+        --l-primary: 50%;
+        --l-success: 50%;
+        --l-selected: 50%;
+        --l-warning: 50%;
+        --l-info: 50%;
+        --l-secondary: 50%;
+        --l-error: 50%;
+        --l-standout: 50%;
+        --l-selected: 50%;
+
+        --h-canvas: 210;
+        --s-canvas: 50%;
+
+        --h-aside: 210;
+        --s-aside: 50%;
+
+        * {
+            font-family: 'Mali';
+        }
+
+        
+
+        .shadow--xs {
+            --bs-am-of-y: calc(1px * var(--bs-direction));
+            --bs-am-blur: 3px;
+            --bs-key-of-y: calc(1px * var(--bs-direction));
+            --bs-key-blur: 0px;
+        }
+
+        .shadow--sm {
+            --bs-am-of-y: calc(2px * var(--bs-direction));
+            --bs-am-blur: 6px;
+            --bs-key-of-y: calc(1px * var(--bs-direction));
+            --bs-key-blur: 0px;
+        }
+
+        .shadow--md {
+            --bs-am-of-y: calc(4px * var(--bs-direction));
+            --bs-am-blur: 12px;
+            --bs-key-of-y: calc(1px * var(--bs-direction));
+            --bs-key-blur: 0px;
+        }
+
+        .shadow--lg {
+            --bs-am-of-y: calc(8px * var(--bs-direction));
+            --bs-am-blur: 24px;
+            --bs-key-of-y: calc(2px * var(--bs-direction));
+            --bs-key-blur: 0px;
+        }
+
+        .shadow--xl {
+            --bs-am-of-y: calc(16px * var(--bs-direction));
+            --bs-am-blur: 48px;
+            --bs-key-of-y: calc(6px * var(--bs-direction));
+            --bs-key-blur: 0px;
+        }
+
+        .border--hand-line {
+            border-width: 4px;
+            border-image : url("@{path-to-images}hand-line.svg");
+            border-image-slice: 6;
+            border-image-repeat: round;
+        }
+
+        [class*="shadow--"],
+        .modal {
+            --bs-key-rgb: 100, 100, 100;
+            box-shadow: var(--bs-key-of-x) var(--bs-key-of-y) var(--bs-key-blur) var(--bs-key-spread) var(--bs-key-rgba);
+            --bs-am-op-weaker: 0;
+            --bs-direction: 1;
+            --bs-key-spread: 2px;
+            --bs-key-blur: 0px;
+            --bs-am-blur: 0px;
+        }
+    }
+}

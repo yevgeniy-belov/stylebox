@@ -1,0 +1,142 @@
+<div class="dropdown">
+    <div class="btn" data-toggle="dropdown">
+        Aligned right
+        <span class="icon-down icon-size--12 margin-l--3xs"></span>
+    </div>
+    <div class="dropdown__box border open append-arrow append-arrow--top-right dropdown__box--align-right margin-t--3xs padding-v--sm shadow--lg white-space--nowrap">
+        <div class="list list--hover list--items-no-wrap list--padded--lg list--md">
+            <div class="list__item">Loremipsumdolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+        </div>
+    </div>
+</div>
+<div class="dropdown dropdown--primary">
+    <div class="btn" data-toggle="dropdown">
+        Primary
+        <span class="icon-down icon-color-inverted-strongest icon-size--12 margin-l--3xs"></span>
+    </div>
+    <div class="dropdown__box border append-arrow append-arrow--top-right dropdown__box--align-right margin-t--3xs padding-v--sm shadow--lg white-space--nowrap">
+        <div class="list list--hover list--items-no-wrap list--padded--lg list--md">
+            <div class="list__item">Loremipsumdolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+        </div>
+    </div>
+</div>
+<div class="dropdown relative">
+    <div class="btn" data-toggle="dropdown">
+        Appended arrow
+        <span class="icon-down icon-size--12 margin-l--3xs"></span>
+    </div>
+    <div class="dropdown__box margin-t--3xs padding-v--sm shadow--lg white-space--nowrap">
+        <div class="list list--hover list--items-no-wrap list--padded--lg list--md">
+            <div class="list__item">Loremipsumdolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+            <div class="list__item">Lorem ipsum dolor</div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<h2 class="border--b padding-b--sm margin-b--xl">Examples</h2>
+<div class="text--sm *font--bold margin-b--md">Menu bar</div>
+<div class="border flex bg--content margin-b--xxl">
+    <div class="" ng-include="'menu-bar.tpl.html'"></div>
+</div>
+<div class="row margin-b--xxl">
+    <div class="col-md-6 margin-b--xl">
+        <div class="text--sm *font--bold margin-b--md">Integrated Menu bar</div>
+        <div class="border">
+            <div class="border--b flex bg--aside">
+                 <div class="" ng-include="'menu-bar.tpl.html'"></div>
+            </div>
+            <div class="padding--md bg--content">{{strings.lorem100}}</div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="text--sm *font--bold margin-b--md">Dropdowns inside a toolbar</div>
+        <div class="border">
+            <div class="border--b  bg--aside flex">
+                <div class="btn btn--integrated">
+                    <div class="icon-plus icon-size--12"></div>
+                </div>
+                <div class="dropdown">
+                    <div class="btn btn--integrated dropdown__button" data-toggle="dropdown">
+                        <div class="icon-filter"></div>
+                        <div class="icon-down icon-size--8 margin-l--xxs"></div>
+                    </div>
+                    <div class="dropdown__box margin-t--3xs padding-v--xs shadow--lg">
+                        <div class="list list--hover list--items-no-wrap list--padded--auto list--md">
+                            <div class="list__item">Loremipsumdolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="btn btn--integrated dropdown__button" data-toggle="dropdown">
+                        <div class="icon-settings"></div>
+                        <div class="icon-down icon-size--8 margin-l--xxs"></div>
+                    </div>
+                    <div class="dropdown__box margin-t--3xs padding-v--xs shadow--lg">
+                        <div class="list list--hover list--items-no-wrap list--padded--auto list--md">
+                            <div class="list__item">Loremipsumdolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="btn btn--integrated dropdown__button" data-toggle="dropdown">
+                        <div class="icon-tag"></div>
+                        <div class="icon-down icon-size--8 margin-l--xxs"></div>
+                    </div>
+                    <div class="dropdown__box margin-t--3xs padding-v--xs shadow--lg">
+                        <div class="list list--hover list--items-no-wrap list--padded--auto list--md">
+                            <div class="list__item">Loremipsumdolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown dropdown--flex">
+                    <div class="btn btn--integrated dropdown__button" data-toggle="dropdown">
+                        Help
+                        <div class="icon-down icon-size--8 margin-l--xxs"></div>
+                    </div>
+                    <div class="dropdown__box margin-t--3xs padding-v--xs shadow--lg">
+                        <div class="list list--hover list--items-no-wrap list--padded--auto list--md">
+                            <div class="list__item">Loremipsumdolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown align-self--center">
+                    <div class="btn btn--xs dropdown__button" data-toggle="dropdown">
+                        Tag
+                        <span class="icon-down icon-size--8 margin-l--xxs"></span>
+                    </div>
+                    <div class="dropdown__box margin-t--3xs padding-v--xs shadow--lg">
+                        <div class="list list--hover list--items-no-wrap list--padded--auto list--md">
+                            <div class="list__item">Loremipsumdolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                            <div class="list__item">Lorem ipsum dolor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="padding--md bg--content">{{strings.lorem100}}</div>
+        </div>
+    </div>
+</div>

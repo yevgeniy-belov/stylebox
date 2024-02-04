@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="{{theme.selected}}" lang="en" ng-app="styleboxApp" ng-controller="componentsController">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stylebox</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" data-ng-if="styleboxBower.version" data-ng-href="css/style{{styleboxBower.version}}.css">
+    <link href="https://fonts.googleapis.com/css?family=Mali:200,300,400,500,600,700&display=swap" rel="stylesheet">
+</head>
+<style>
+    @keyframes docs-spin-loader-rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    body, html{
+        padding: 0;
+        margin: 0;
+    }
+    .docs-spin-loader {
+        height: 64px;
+        width: 64px;
+        position: relative;
+        -webkit-animation: docs-spin-loader-rotation 1s 0 cubic-bezier(0.4, 0, 0.2, 1);
+        -moz-animation: docs-spin-loader-rotation 1s 0 cubic-bezier(0.4, 0, 0.2, 1);
+        -ms-animation: docs-spin-loader-rotation 1s 0 cubic-bezier(0.4, 0, 0.2, 1);
+        animation-iteration-count: infinite;
+    }
+
+    .docs-spin-loader:after {
+        border-radius: 100em;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-top: 2px solid rgba(0, 0, 0, 0.08);
+        border-right: 2px solid rgba(0, 0, 0, 0.08);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+        border-left: 2px solid #01A982;
+        -webkit-animation: docs-spin-loader-rotation 2s 0 linear;
+        -moz-animation: docs-spin-loader-rotation 2s 0 linear;
+        -ms-animation: docs-spin-loader-rotation 2s 0 linear;
+        animation-iteration-count: infinite;
+    }
+
+    .sbx-app {
+        display: none;
+    }
+
+    .sbx {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body class="bg--canvas">
+    <div class="sbx">
+        <div class="docs-spin-loader"></div>
+    </div>
+    <div class="sbx-app">
+        <div class="mastside-toggle" ng-click="toggleSidenavState()"></div>
+        <div ui-view='sidenav'></div>
+        <div class="fixed stretch z-index--1000 bg--veil" ng-if="sidenavState === 'open'" ng-click="closeSidenavState()"></div>
+        <div class="absolute-stretch main-content" ui-view='content' autoscroll="true"></div>
+    </div>
+</body>
+<% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="/<%= file %>"></script>
+    <% }); %>
+
+</html>

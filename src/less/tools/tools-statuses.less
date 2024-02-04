@@ -1,0 +1,38 @@
+.status (@status, @color, @icon) {
+    @icon-status: "icon-@{status}";
+    @icon-color : "color-text-@{color}";
+    @icon-name  : "icon-@{icon}";
+
+    .status--@{status} {
+        .icon--status {
+            color: ~"var(--@{icon-color})";
+
+            &:before {
+                font-family: @icon-font-base-name;
+                content: @@icon-name;
+
+            }
+        }
+        .icon-color--status,
+        .text-color--status {
+            color: ~"var(--@{icon-color})";
+        }
+
+        .bg--status {
+            background-color: ~"var(--@{icon-color})";
+        }
+
+        .border--color-status {
+            border-color: ~"var(--@{icon-color})";
+        }
+        .tabs--integrated {
+            .tabs__item {
+                &.open, &.active {
+                    &:after {
+                        background-color: ~"var(--@{icon-color})";
+                    }
+                }
+            }
+        }
+    }
+}

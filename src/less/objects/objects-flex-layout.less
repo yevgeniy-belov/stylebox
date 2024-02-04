@@ -1,0 +1,205 @@
+.flex {
+    .flex-display(flex);
+    .relative;
+    // Fix for FF34.0+
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=1043520
+    & > {
+        min-height: 0;
+        min-width: 0;
+    }
+}
+.inline-flex {
+    .flex-display(inline-flex);
+}
+
+.rows {
+    &:extend(.major);
+    &:extend(.direction--cols);
+}
+.cols {
+    &:extend(.major);
+}
+.minor {
+    &:extend(.flex);
+    &:extend(.flex--0);
+}
+.wrap {
+    .flex-wrap(wrap);
+}
+.nowrap{
+    .flex-wrap(nowrap)
+
+}
+.flex-basis--100{
+    .flex-basis(100%);
+}
+.flex--1 {
+    .flex(1, 1, auto);
+}
+.flex--items-flex-1 {
+     > *{
+        .flex--1!important;
+    }
+}
+.flex--1-1-0 {
+  .flex(1, 1, 0);
+}
+.flex--0-1-0 {
+  .flex(0, 1, 0);
+}
+.major {
+    &:extend(.flex);
+    &:extend(.flex--1);
+    -ms-flex-preferred-size: 100%;
+}
+.flex-basis--0{
+    .flex-basis(0);
+    -ms-flex-preferred-size: 0;
+}
+.flex--1--100{
+    .flex(1, 1, 100%)
+}
+.flex--0 {
+    .flex(0, 0, auto);
+}
+.flex--0-1 {
+    .flex(0, 1, auto);
+}
+.flex--1-0 {
+    .flex(1, 0, auto);
+}
+.direction--rows {
+    .flex-direction(row);
+}
+.flex-direction--rows {
+    .flex-direction(row);
+}
+.flex-direction--column {
+    .flex-direction(column);
+}
+.direction--cols {
+    &:extend(.flex-direction--column);
+}
+.grow--1 {
+    .flex-grow(1);
+}
+.grow--0 {
+    .flex-grow(0);
+}
+.flex-grow--2 {
+    .flex-grow(2);
+}
+.shrink--0 {
+    .flex-shrink(0);
+}
+.shrink--1 {
+    .flex-shrink(1);
+}
+.content--centered {
+    .justify-content(center);
+}
+.vertical {
+    .flex-direction(column);
+}
+.ms-basis--100 {
+    -ms-flex-preferred-size: 100%;
+}
+.ms-basis--auto {
+    -ms-flex-preferred-size: auto;
+}
+.basis--auto {
+    .flex-basis(auto);
+}
+.justify-content--start {
+    .justify-content(flex-start);
+}
+.justify-content--end {
+    .justify-content(flex-end)
+}
+.justify-content--center {
+    .justify-content(center);
+}
+.justify-content--space-between {
+    .justify-content(space-between)
+}
+.justify-content--around {
+    .justify-content(space-around);
+}
+
+.align-content--start {
+    .align-content(flex-start);
+}
+.align-content--start {
+    .align-content(flex-start);
+}
+.align-content--start {
+    .align-content(flex-start);
+}
+.align-content--end {
+    .align-content(flex-end);
+}
+.align-content--center {
+    .align-content(center)
+}
+.align-content--between {
+    .align-content(flex-between);
+}
+.align-content--around {
+    .align-content(flex-around);
+}
+.align-content--stretch {
+    .align-content(flex-stretch);
+}
+.align-items--start {
+    .align-items(flex-start);
+}
+.align-items--end {
+    .align-items(flex-end);
+}
+.align-items--center {
+    .align-items(center);
+}
+.align-items--baseline {
+    .align-items(baseline);
+}
+.align-items--stretch {
+    .align-items(stretch)
+}
+.align-self--end {
+    .align-self(flex-end);
+}
+.align-self--start {
+    .align-self(flex-start);
+}
+.align-self--center {
+    .align-self(center);
+}
+.align-self--stretch {
+    .align-self(stretch);
+}
+.static{
+    position: static;
+}
+.flex-order--1{
+    .flex-order(1);
+}
+.flex-order--2{
+    .flex-order(2);
+}
+//***************************
+.flex{
+    &.static{
+        .static;
+    }
+}
+/* Generates too many code...
+   Needs recheck.
+*/
+//***************************
+.flex-grow--full{
+    .flex-grow(10000000);
+}
+.centerize{
+    .align-items--center;
+    .justify-content--center;
+}

@@ -1,0 +1,23 @@
+@modularRatio : 1.618;
+
+@micro--xxs   : 1px;
+@micro--xs    : 2px;
+@micro--sm    : 4px;
+@micro--md    : 6px;
+@micro--lg    : 9px;
+@micro--xl    : 14px;
+@micro--xxl   : 20px;
+@xxs          : 30px;
+@xs           : 50px;
+@sm           : round(@xs * @modularRatio);
+@md           : round(@sm * @modularRatio);
+@lg           : round(@md * @modularRatio);
+@xl           : round(@lg * @modularRatio);
+@xxl          : round(@xl * @modularRatio);
+@macro--xxs   : round(@xxl * @modularRatio);
+@macro--xs    : round(@macro--xxs * @modularRatio);
+@macro--sm    : round(@macro--xs * @modularRatio);
+@macro--md    : round(@macro--sm * @modularRatio);
+@macro--lg    : round(@macro--md * @modularRatio);
+@macro--xl    : round(@macro--lg * @modularRatio);
+@macro--xxl   : round(@macro--xl * @modularRatio);

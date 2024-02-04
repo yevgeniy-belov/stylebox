@@ -1,0 +1,17 @@
+.focus-custom-outline(){
+	z-index: 10;
+        .relative;
+		&:before {
+            // ":before" is used here and ":after" is used for dividers inside button groups.
+			content: '';
+			.block;
+			.absolute;
+			top: -4px;
+			bottom: -4px;
+			left: -4px;
+			right: -4px;
+			border-radius: 3px;
+			border: 2px solid var(--color-primary-opacity-weak);
+            box-shadow: 0 0 0 2px var(--color-border-inverted-strongest);
+		}
+}

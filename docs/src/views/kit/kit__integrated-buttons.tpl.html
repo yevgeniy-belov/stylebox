@@ -1,0 +1,11 @@
+<div class="grid__item" ng-repeat="bg in modularData.backgrounds" ng-init="bgIndex = $index">
+    <div class="bg--{{bg}} padding--xs">
+        <div class="grid grid--flexy-items grid--guttered--xs">
+            <div class="grid__item" ng-repeat="state in modularData.states">
+                <div class="btn btn--integrated btn--icon {{state}}" ng-class="{'btn--inverted': bgIndex > 4}">
+                    <div class="icon-delete icon-size--10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

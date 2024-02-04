@@ -1,0 +1,38 @@
+module.exports = {
+    build_dir: 'docs/build',
+    compile_dir: 'docs/build',
+    compiled_styles: 'css',
+    vendor_files: {
+        js: [
+            'vendor/angular/angular.js',
+            'vendor/angular-ui-router/release/angular-ui-router.js',
+            'vendor/angular-animate/angular-animate.js',
+            'vendor/ngstorage/ngStorage.js',
+            'vendor/ui-select/dist/select.js',
+            'vendor/angular-sanitize/angular-sanitize.js',
+            'vendor/angular-highlightjs/angular-highlightjs.js',
+            'vendor/checklist-model/checklist-model.js',
+            'vendor/clipboard/dist/clipboard.js',
+            'vendor/ngclipboard/dist/ngclipboard.js',
+        ],
+        js_min: [
+            'vendor/angular/angular.min.js',
+            'vendor/angular-ui-router/release/angular-ui-router.min.js',
+            'vendor/angular-animate/angular-animate.min.js',
+            'vendor/ngstorage/ngStorage.min.js',
+            'vendor/ui-select/dist/select.js',
+            'vendor/angular-sanitize/angular-sanitize.min.js',
+            'vendor/angular-highlightjs/angular-highlightjs.min.js',
+            'vendor/checklist-model/checklist-model.js',
+            'vendor/clipboard/dist/clipboard.min.js',
+            'vendor/ngclipboard/dist/ngclipboard.min.js',
+        ],
+    },
+    lib_js: ['docs/src/lib/**/*.js'],
+    app_files: {
+        js: ['docs/src/js/**/*.js'],
+        templates: ['docs/src/**/*.tpl.html'],
+        index: ['docs/src/index.html'],
+        styles: 'docs/src/less',
+    },
+};

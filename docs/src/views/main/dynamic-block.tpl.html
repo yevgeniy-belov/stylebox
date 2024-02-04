@@ -1,0 +1,30 @@
+<div class="bg--primary">
+	<div class="page text--3xl font--thin text-color--opposite text--capitalize height--sm align-items--center flex"> Dynamic block </div>
+</div>
+<div class="page" ng-controller="dynamicComponentsCtrl as ctrl">
+	<div class="example margin-v--xl">
+		<div class="flex wrap bg--aside padding-h--xl padding-v--md">
+			<div class="margin-r--md">
+				<div class="font--semibold">Block:</div>
+				<select class="btn" ng-model="ctrl.selectedBlockKeyName" ng-change="ctrl.complieTpl()">
+					<option ng-repeat="type in ctrl.blocksObjects">{{type}}</option>
+				</select>
+			</div>
+			<div class="margin-r--md" ng-repeat="(key, property) in ctrl.blocks[ctrl.selectedBlockKeyName].properties">
+				<div class="text--capitalize font--semibold"> {{key}}:</div>
+				<select class="btn" ng-model="ctrl.blocks[ctrl.selectedBlockKeyName].properties[key].defaultChoice" ng-options="o as o for o in property.options">
+				</select>
+			</div>
+		</div>
+		<div id="exampleBlock">
+			<div class="padding--xl bg--aside border--t" id="exampleBlock__item"></div>
+		</div>
+		<div class="relative">
+			<div class="btn btn--primary absolute top--md right--lg" ngclipboard data-clipboard-target="#codeSnippet">
+				<div class="icon-copy"></div>
+				<div class="margin-l--xs"> Copy </div>
+			</div>
+			<div class="max-height--xl min-height--sm overflow--auto" id="codeSnippet" ng-bind-html="ctrl.codeSnippet"></div>
+		</div>
+	</div>
+</div>

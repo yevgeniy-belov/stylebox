@@ -1,0 +1,11 @@
+
+.bg(@bg) {
+    --bg-h: ~"var(--h-@{bg})";
+    --bg-s: ~"var(--s-@{bg})";
+    --bg-l: ~"var(--l-@{bg})";
+    --bg-a: ~"var(--a-@{bg})";
+    // Lightness multiplier
+    --bg-l-m: 1;
+    background-color: hsla(var(--bg-h),var(--bg-s), calc(var(--bg-l) * var(--bg-l-m)),var(--bg-a));
+    fill: hsla(var(--bg-h),var(--bg-s), calc(var(--bg-l) * var(--bg-l-m)),var(--bg-a));
+}

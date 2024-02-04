@@ -1,0 +1,11 @@
+.label-variant(@color) {
+    background-color: @color;
+    color: red;
+
+    &[href] {
+        &:focus,
+        &:hover {
+            background-color: darken(@color, 10%);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="mastside shadow--md bg--aside {{sidenavState}}">
+	<div class="height--sm minor centerize border--b">
+		<a class="docs-stylebox-icon" ui-sref="index"></a>
+	</div>
+	<div class="list list--hover list--padded--lg list--md flex--1 overflow--auto list--markers--end">
+		<div class="margin-t--sm"></div>
+		<div class="list__item font--semibold" ui-sref="home" ui-sref-active="selected">Home</div>
+		<div class="list__item font--semibold" ui-sref="gettingStarted" ui-sref-active="selected">Getting started</div>
+		<div class="list__item font--semibold" ui-sref="allComponents" ui-sref-active="selected">All components</div>
+		<div class="list__item font--semibold" ui-sref="typographyMap" ui-sref-active="selected">Typography map</div>
+		<div class="list__item font--semibold" ui-sref="dynamicBlock" ui-sref-active="selected">Dynamic block</div>
+		<div class="border--b margin-v--xs"></div>
+		<div class="list__item text--capitalize" ng-repeat="category in componentsList" ng-class="{'open':currentCategory === true}" ui-sref-active="selected" ui-sref="components({component: category})" ng-click="closeSidenavState()">{{category}}</div>
+	</div>
+	<div class="minor flex-direction--column border--t align-items--center padding-t--sm">
+		<select class="btn" ng-model="theme.selected"  ng-options="o as o for o in themes"></select>
+		<!-- <div class="margin-b--xs text--md">{{styleboxBower.version}}</div> -->
+		<a href="http://mydtbld0005.hpeswlab.net:7990/users/belovy/repos/stylebox/browse" class="btn btn--primary margin--lg">GitHub</a>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+.alert {
+    .flex;
+    &+.alert {
+        .margin-t--sm;
+    }
+    .alert--info;
+}
+
+.alert__message {
+    .flex--1;
+    .ellipsis;
+    margin: 4px @gap--sm 3px @gap--sm;
+}
+
+.alert__controls {
+    .minor;
+    max-height: 32px;
+}
+
+
+.alert--success{.alert-variant(success)};
+.alert--info{.alert-variant(info)};
+.alert--warning{.alert-variant(warning)};
+.alert--error{.alert-variant(error)};

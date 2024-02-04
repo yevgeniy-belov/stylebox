@@ -1,0 +1,155 @@
+// @shadow-color-key                : 0, 0, 0,;
+// @shadow-color-ambient           : 0, 0, 0,;
+
+// @opacity-ratio                   : 1.6;
+
+// @shadow-ambient-weaker : 0.08;
+// @shadow-ambient-weak   : @shadow-ambient-weaker * @opacity-ratio;
+// @shadow-ambient-default : @shadow-ambient-weak * @opacity-ratio;
+// @shadow-ambient-strong    : @shadow-ambient-default * @opacity-ratio;
+// @shadow-ambient-stronger  : @shadow-ambient-strong * @opacity-ratio;
+
+// @shadow-key-weaker     : 0.05;
+// @shadow-key-weak       : @shadow-key-weaker * @opacity-ratio;
+// @shadow-key-default     : @shadow-key-weak * @opacity-ratio;
+// @shadow-key-strong        : @shadow-key-default * @opacity-ratio;
+// @shadow-key-stronger      : @shadow-key-strong * @opacity-ratio;
+
+// @shadow-size--key                : 1px;
+
+// @shadow-color-ambient--stronger    : ~"rgba(@{shadow-color-ambient}, @{shadow-ambient-stronger})";
+// @shadow-color-key--stronger        : ~"rgba(@{shadow-color-key}, @{shadow-key-stronger})";
+
+// @shadow-color-ambient--strong      : ~"rgba(@{shadow-color-ambient}, @{shadow-ambient-strong})";
+// @shadow-color-key--strong          : ~"rgba(@{shadow-color-key}, @{shadow-key-strong})";
+
+// @shadow-color-ambient--default   : ~"rgba(@{shadow-color-ambient}, @{shadow-ambient-default})";
+// @shadow-color-key--default       : ~"rgba(@{shadow-color-key}, @{shadow-key-default})";
+
+// @shadow-color-ambient--weak     : ~"rgba(@{shadow-color-ambient}, @{shadow-ambient-weak})";
+// @shadow-color-key--weak         : ~"rgba(@{shadow-color-key}, @{shadow-key-weak})";
+
+// @shadow-color-ambient--weaker   : ~"rgba(@{shadow-color-ambient}, @{shadow-ambient-weaker})";
+// @shadow-color-key--weaker       : ~"rgba(@{shadow-color-key}, @{shadow-key-weaker})";
+
+// @shadow-size-ambient--xs         : 0 1px 3px;
+// @shadow-size-key--xs             : 0 1px 1px;
+
+// @shadow-size-ambient--sm         : 0 2px 6px;
+// @shadow-size-key--sm             : 0 1px 2px;
+
+// @shadow-size-ambient--md         : 0 4px 12px;
+// @shadow-size-key--md             : 0 1px 3px;
+
+// @shadow-size-ambient--lg         : 0 8px 24px;
+// @shadow-size-key--lg             : 0 2px 5px;
+
+// @shadow-size-ambient--xl         : 0 16px 48px;
+// @shadow-size-key--xl             : 0 6px 9px;
+
+// @shadow-size-ambient--xs--top: 0 -1px 3px;
+// @shadow-size-key--xs--top: 0 -1px 1px;
+// @shadow-size-ambient--sm--top: 0 -2px 6px;
+// @shadow-size-key--sm--top: 0 -2px 2px;
+// @shadow-size-ambient--md--top: 0 -4px 12px;
+// @shadow-size-key--md--top: 0 -4px 4px;
+// @shadow-size-ambient--lg--top: 0 -8px 24px;
+// @shadow-size-key--lg--top: 0 -8px 8px;
+// @shadow-size-ambient--xl--top: 0 -16px 48px;
+// @shadow-size-key--xl--top: 0 -16px 16px;
+
+// .shadow--stronger{
+//     // &.shadow--xs{box-shadow: @shadow-size-ambient--xs @shadow-color-ambient--stronger,@shadow-size-key--xs @shadow-color-key--stronger;}
+//     &.shadow--sm {box-shadow: @shadow-size-ambient--sm @shadow-color-ambient--stronger,@shadow-size-key--sm @shadow-color-key--stronger;}
+//     &.shadow--md {box-shadow: @shadow-size-ambient--md @shadow-color-ambient--stronger,@shadow-size-key--md @shadow-color-key--stronger;}
+//     &.shadow--lg {box-shadow: @shadow-size-ambient--lg @shadow-color-ambient--stronger,@shadow-size-key--lg @shadow-color-key--stronger;}
+//     &.shadow--xl {box-shadow: @shadow-size-ambient--xl @shadow-color-ambient--stronger,@shadow-size-key--xl @shadow-color-key--stronger;}
+// }
+
+// .shadow--strong{
+//     // &.shadow--xs{box-shadow: @shadow-size-ambient--xs @shadow-color-ambient--strong,@shadow-size-key--xs @shadow-color-key--strong;}
+//     &.shadow--sm {box-shadow: @shadow-size-ambient--sm @shadow-color-ambient--strong,@shadow-size-key--sm @shadow-color-key--strong;}
+//     &.shadow--md {box-shadow: @shadow-size-ambient--md @shadow-color-ambient--strong,@shadow-size-key--md @shadow-color-key--strong;}
+//     &.shadow--lg {box-shadow: @shadow-size-ambient--lg @shadow-color-ambient--strong,@shadow-size-key--lg @shadow-color-key--strong;}
+//     &.shadow--xl {box-shadow: @shadow-size-ambient--xl @shadow-color-ambient--strong,@shadow-size-key--xl @shadow-color-key--strong;}
+// }
+
+// .shadow--xs{box-shadow: @shadow-size-ambient--xs @shadow-color-ambient--default,@shadow-size-key--xs @shadow-color-key--default}
+// .shadow--sm {box-shadow: @shadow-size-ambient--sm @shadow-color-ambient--default,@shadow-size-key--sm @shadow-color-key--default}
+// .shadow--md {box-shadow: @shadow-size-ambient--md @shadow-color-ambient--default,@shadow-size-key--md @shadow-color-key--default}
+// .shadow--lg {box-shadow: @shadow-size-ambient--lg @shadow-color-ambient--default,@shadow-size-key--lg @shadow-color-key--default}
+// .shadow--xl {box-shadow: @shadow-size-ambient--xl @shadow-color-ambient--default,@shadow-size-key--xl @shadow-color-key--default}
+
+// .shadow--weak{
+//     // &.shadow--xs{box-shadow: @shadow-size-ambient--xs @shadow-color-ambient--weak,@shadow-size-key--xs @shadow-color-key--weak;}
+//     &.shadow--sm {box-shadow: @shadow-size-ambient--sm @shadow-color-ambient--weak,@shadow-size-key--sm @shadow-color-key--weak;}
+//     &.shadow--md {box-shadow: @shadow-size-ambient--md @shadow-color-ambient--weak,@shadow-size-key--md @shadow-color-key--weak;}
+//     &.shadow--lg {box-shadow: @shadow-size-ambient--lg @shadow-color-ambient--weak,@shadow-size-key--lg @shadow-color-key--weak;}
+//     &.shadow--xl {box-shadow: @shadow-size-ambient--xl @shadow-color-ambient--weak,@shadow-size-key--xl @shadow-color-key--weak;}
+// }
+
+// .shadow--weaker{
+//     // &.shadow--xs{box-shadow: @shadow-size-ambient--xs @shadow-color-ambient--weaker,@shadow-size-key--xs @shadow-color-key--weaker;}
+//     &.shadow--sm {box-shadow: @shadow-size-ambient--sm @shadow-color-ambient--weaker,@shadow-size-key--sm @shadow-color-key--weaker;}
+//     &.shadow--md {box-shadow: @shadow-size-ambient--md @shadow-color-ambient--weaker,@shadow-size-key--md @shadow-color-key--weaker;}
+//     &.shadow--lg {box-shadow: @shadow-size-ambient--lg @shadow-color-ambient--weaker,@shadow-size-key--lg @shadow-color-key--weaker;}
+//     &.shadow--xl {box-shadow: @shadow-size-ambient--xl @shadow-color-ambient--weaker,@shadow-size-key--xl @shadow-color-key--weaker;}
+// }
+
+// .shadow--t {
+//     &.shadow--xs {
+//         box-shadow: @shadow-size-ambient--xs--top @shadow-color-ambient--default, @shadow-size-key--xs--top @shadow-color-key--default
+//     }
+// }
+// .shadow--t {
+//     &.shadow--sm {
+//         box-shadow: @shadow-size-ambient--sm--top @shadow-color-ambient--default, @shadow-size-key--sm--top @shadow-color-key--default
+//     }
+// }
+// .shadow--t {
+//     &.shadow--md {
+//         box-shadow: @shadow-size-ambient--md--top @shadow-color-ambient--default, @shadow-size-key--md--top @shadow-color-key--default
+//     }
+// }
+.shadow--v {
+    .relative;
+    &:after {
+        z-index: 1;
+        border-radius: 10px;
+        content: "";
+        .absolute-stretch;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        clip: rect(0, 0, auto, -20px);
+    }
+}
+
+.shadow--r {
+    .relative;
+    &:before {
+        border-radius: 10px;
+        content: "";
+        .absolute-stretch;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        clip: rect(0, 0, auto, 0);
+    }
+}
+.on-hover--shadow-sm{
+    &:hover{
+        .shadow--sm;
+    }
+}
+.on-hover--shadow-md{
+    &:hover{
+        .shadow--md;
+    }
+}
+.on-hover--shadow-lg{
+    &:hover{
+        .shadow--lg;
+    }
+}
+.on-hover--shadow-xl{
+    &:hover{
+        .shadow--xl;
+    }
+}

@@ -1,0 +1,20 @@
+<table class="table table--tertiary">
+    <thead>
+        <tr>
+            <th>Color</th>
+            <th class=" *break-all" ng-repeat="strength in modularData.strength">
+                <div class="text--xxs">
+                    {{strength}}
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody class="">
+        <tr class="" ng-repeat="color in backgroundsData.backgroundWithOpacities">
+            <td><div class="bg--content text-block padding--xs inline-block radius--sm border border--strong">{{color.name}}</div></td>
+            <td class="relative  " ng-repeat="strength in modularData.strength">
+                <div class="stretch absolute-stretch bg--{{color.name}} bg-alpha--{{strength}}"></div>
+            </td>
+        </tr>
+    </tbody>
+</table>

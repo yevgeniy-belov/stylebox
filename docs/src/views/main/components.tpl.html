@@ -1,0 +1,23 @@
+<div class="bg--primary">
+    <div class="container text--3xl font--thin text-color--opposite text--capitalize height--sm align-items--center flex"> {{currentCategory}} </div>
+</div>
+<div class="container">
+    <div class=" margin-v--3xl {{example.exampleHelpers}}" ng-repeat="example in componentsData | filter:{category:currentCategory}:true">
+       
+            <div class="text--xxl margin-b--md" title="{{example.fileName}}">{{example.name}}</div>
+            <div class="">{{example.description}}</div>
+       
+        <div class="*example__body *padding--xl {{example.bodyColor}} {{example.bodyHelpers}}" ng-include="'components/' + example.fileName + '.tpl.html'"></div>
+        <div class="margin-t--lg relative z-index--10 flex *justify-content--end minor" ng-class="{'border--t': codeSection !== 'open'}" ng-show="example.showCode">
+            <div class="absolute *right--xs top--xs">
+                <div ng-show="codeSection != 'open'" class="btn btn--silent btn--icon" ng-click="codeSection = 'open'">
+                    <div class="icon-stylebox icon-color-accent"></div>
+                </div>
+                <div ng-show="codeSection == 'open'" class="btn btn--inverted btn--integrated btn--icon" ng-click="codeSection = ''">
+                    <div class="icon-delete"></div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="codeSection == 'open'" class="" hljs include="'components/' + example.fileName + '.tpl.html'" language="html"></div>
+    </div>
+</div>

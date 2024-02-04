@@ -1,0 +1,193 @@
+.buttons-group {
+	&.buttons-group--bordered {
+		.border;
+	}
+
+	border-radius: 2px;
+
+	.inline-flex;
+
+	&.buttons-group--flex {
+		.flex;
+	}
+
+	.btn {
+		box-shadow: none;
+		border: none;
+
+		& + .btn {
+			border-left: none;
+
+			&:not(:last-child) {
+				border-right: none;
+			}
+		}
+		&:not(:last-child) {
+			border-radius: 0;
+		}
+	}
+
+	&.buttons-group {
+		.btn:not(.btn--integrated) {
+			&:first-child {
+				border-top-left-radius: 2px;
+				border-bottom-left-radius: 2px;
+			}
+
+			&:last-child {
+				border-top-right-radius: 2px;
+				border-bottom-right-radius: 2px;
+			}
+		}
+		&.buttons-group--bordered .btn {
+			&:first-child {
+				border-top-left-radius: 1px;
+				border-bottom-left-radius: 1px;
+			}
+
+			&:last-child {
+				border-top-right-radius: 1px;
+				border-bottom-right-radius: 1px;
+			}
+		}
+	}
+	&.buttons-group--integrated {
+		border-radius: 0;
+		.btn.btn.btn {
+			border-radius: 0;
+		}
+	}
+
+	&.buttons-group--xs {
+		.btn {
+			.btn--xs;
+		}
+	}
+
+	&.buttons-group--sm {
+		.btn {
+			.btn--sm;
+		}
+	}
+
+	&.buttons-group--md,
+	& {
+		.btn {
+			.btn--md;
+		}
+	}
+
+	&.buttons-group--lg {
+		.btn {
+			.btn--lg;
+		}
+	}
+
+	&.buttons-group--xl {
+		.btn {
+			.btn--xl;
+		}
+	}
+
+	&.buttons-group--spacing--xs {
+		.btn {
+			padding-left: 0.5em;
+			padding-right: 0.5em;
+		}
+	}
+
+	&.buttons-group--spacing--sm {
+		.btn {
+			padding-left: 0.72em;
+			padding-right: 0.72em;
+		}
+	}
+
+	&.buttons-group--spacing--md {
+		.btn {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+
+	&.buttons-group--spacing--lg {
+		.btn {
+			padding-left: 1.3em;
+			padding-right: 1.3em;
+		}
+	}
+
+	&.buttons-group--spacing--xl {
+		.btn {
+			padding-left: 1.7em;
+			padding-right: 1.7em;
+		}
+	}
+}
+
+.buttons-group--btn-integrated {
+	.btn {
+		.btn--integrated;
+	}
+}
+.buttons-group--btn-silent {
+	.btn {
+		.btn--silent;
+	}
+}
+
+.btn {
+	&.open,
+	&.selected {
+		.buttons-group--primary & {
+			.btn--primary;
+		}
+		.buttons-group--secondary & {
+			.btn--secondary;
+		}
+	}
+}
+
+.buttons-group--separated {
+	.btn {
+		.relative;
+
+		&:not(:first-child) {
+			&:after {
+				content: '';
+				.border--l;
+				.border--weaker;
+				.block;
+				.top--xxs;
+				.bottom--xxs;
+				left: -1px;
+				.absolute;
+			}
+		}
+
+		&:active,
+		&:focus-visible,
+		&.focus,
+		&.open,
+		&.active {
+			&,
+			& + .btn {
+				&:after {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	&.buttons-group--separated-hide-on-hover .btn {
+		&:hover {
+			&,
+			& + .btn {
+				&:after {
+					.bg--error;
+					display: none !important;
+				}
+			}
+		}
+	}
+}

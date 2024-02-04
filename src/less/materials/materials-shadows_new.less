@@ -1,0 +1,119 @@
+:root {
+    --bs-key-rgb: 0, 0, 0;
+    --bs-am-rgb: 0, 0, 0;
+    --op-ratio: 1.6;
+    --bs-direction: 1; // provides ability to have top shadows
+
+    --bs-key-op-weaker: 0.05;
+    --bs-key-op-weak: calc(var(--bs-key-op-weaker) * var(--op-ratio));
+    --bs-key-op-default: calc(var(--bs-key-op-weak) * var(--op-ratio));
+    --bs-key-op-strong: calc(var(--bs-key-op-default) * var(--op-ratio));
+    --bs-key-op-stronger: calc(var(--bs-key-op-strong) * var(--op-ratio));
+
+    --bs-key-of-x: 0;
+    --bs-key-of-y: calc(1px * var(--bs-direction));
+    --bs-key-blur: calc(3px * var(--bs-direction));
+    --bs-key-spread: 0;
+    /*  Sets cascading to default values.
+        This prevents top level var assignments cascading to descendants.
+    */
+    & *{
+        --bs-key-rgba: rgba(var(--bs-key-rgb), var(--bs-key-op-default));
+        --bs-am-rgba: rgba(var(--bs-am-rgb), var(--bs-am-op-default));
+    }
+    --bs-am-op-weaker: 0.08;
+    --bs-am-op-weak: calc(var(--bs-am-op-weaker) * var(--op-ratio));
+    --bs-am-op-default: calc(var(--bs-am-op-weak) * var(--op-ratio));
+    --bs-am-op-strong: calc(var(--bs-am-op-default) * var(--op-ratio));
+    --bs-am-op-stronger: calc(var(--bs-am-op-strong) * var(--op-ratio));
+
+    --bs-am-of-x: 0;
+    --bs-am-of-y: calc(4px * var(--bs-direction));
+    --bs-am-blur: calc(12px * var(--bs-direction));
+    --bs-am-spread: 0;
+    --bs-am-rgba: rgba(var(--bs-am-rgb), var(--bs-am-op-default));
+}
+    .shadow--xs,
+    .shadow--sm,
+    .shadow--md,
+    .shadow--lg,
+    .shadow--xl {
+        box-shadow:        
+            var(--bs-key-of-x) 
+            var(--bs-key-of-y) 
+            var(--bs-key-blur) 
+            var(--bs-key-spread) 
+            var(--bs-key-rgba)
+            ,
+            var(--bs-am-of-x) 
+            var(--bs-am-of-y) 
+            var(--bs-am-blur) 
+            var(--bs-am-spread) 
+            var(--bs-am-rgba)
+            ;
+    }
+
+.shadow--weaker {
+    --bs-key-rgba: rgba(var(--bs-key-rgb), var(--bs-key-op-weaker));
+    --bs-am-rgba: rgba(var(--bs-am-rgb), var(--bs-am-op-weaker));
+}
+
+.shadow--weak {
+    --bs-key-rgba: rgba(var(--bs-key-rgb), var(--bs-key-op-weak));
+    --bs-am-rgba: rgba(var(--bs-am-rgb), var(--bs-am-op-weak));
+}
+
+.shadow--medium {
+    --bs-key-rgba: rgba(var(--bs-key-rgb), var(--bs-key-op-default));
+    --bs-am-rgba: rgba(var(--bs-am-rgb), var(--bs-am-op-default));
+}
+
+.shadow--strong {
+    --bs-key-rgba: rgba(var(--bs-key-rgb), var(--bs-key-op-strong));
+    --bs-am-rgba: rgba(var(--bs-am-rgb), var(--bs-am-op-strong));
+}
+
+.shadow--stronger {
+    --bs-key-rgba: rgba(var(--bs-key-rgb), var(--bs-key-op-stronger));
+    --bs-am-rgba: rgba(var(--bs-am-rgb), var(--bs-am-op-stronger));
+}
+
+//
+
+.shadow--xs {
+    --bs-am-of-y: calc(1px * var(--bs-direction));
+    --bs-am-blur: 3px;
+    --bs-key-of-y: calc(1px * var(--bs-direction));
+    --bs-key-blur: 1px;
+}
+
+.shadow--sm {
+    --bs-am-of-y: calc(2px * var(--bs-direction));
+    --bs-am-blur: 6px;
+    --bs-key-of-y: calc(1px * var(--bs-direction));
+    --bs-key-blur: 2px;
+}
+
+.shadow--md {
+    --bs-am-of-y: calc(4px * var(--bs-direction));
+    --bs-am-blur: 12px;
+    --bs-key-of-y: calc(1px * var(--bs-direction));
+    --bs-key-blur: 3px;
+}
+
+.shadow--lg {
+    --bs-am-of-y: calc(8px * var(--bs-direction));
+    --bs-am-blur: 24px;
+    --bs-key-of-y: calc(2px * var(--bs-direction));
+    --bs-key-blur: 5px;
+}
+
+.shadow--xl {
+    --bs-am-of-y: calc(16px * var(--bs-direction));
+    --bs-am-blur: 48px;
+    --bs-key-of-y: calc(6px * var(--bs-direction));
+    --bs-key-blur: 9px;
+}
+.shadow--t {
+    --bs-direction: -1;
+}

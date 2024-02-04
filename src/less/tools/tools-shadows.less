@@ -1,0 +1,8 @@
+.shadow(@size, @color){
+    .shadow__color-gen(@color) when (@color = stronger){box-shadow: ~"@{shadow-size-ambient--@{size}}" @shadow-color-ambient--stronger, ~"@{shadow-size-key--@{size}}" @shadow-color-key--stronger;}
+    .shadow__color-gen(@color) when (@color = strong){box-shadow: ~"@{shadow-size-ambient--@{size}}" @shadow-color-ambient--strong, ~"@{shadow-size-key--@{size}}" @shadow-color-key--strong;}
+    .shadow__color-gen(@color) when (@color = default){box-shadow: ~"@{shadow-size-ambient--@{size}}" @shadow-color-ambient--default, ~"@{shadow-size-key--@{size}}" @shadow-color-key--default;}
+    .shadow__color-gen(@color) when (@color = weak){box-shadow: ~"@{shadow-size-ambient--@{size}}" @shadow-color-ambient--weak, ~"@{shadow-size-key--@{size}}" @shadow-color-key--weak;}
+    .shadow__color-gen(@color) when (@color = weaker){box-shadow: ~"@{shadow-size-ambient--@{size}}" @shadow-color-ambient--weaker, ~"@{shadow-size-key--@{size}}" @shadow-color-key--weaker;}
+    .shadow__color-gen(@color);
+}

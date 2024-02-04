@@ -1,0 +1,149 @@
+.modal-wrapper {
+    .rows;
+    .centerize;
+    .absolute-stretch;
+    .padding-h--lg;
+}
+
+.modal {
+    .bg--content;
+    z-index: 1040;
+	.margin-v--xxl;
+    .shadow--xl;
+    .shadow--stronger;
+	width: 600px;
+    .flex;
+	.flex-direction--column;
+}
+
+.modal__body {
+    .flex--1;
+    -ms-flex-preferred-size: auto;
+    .bg--content;
+    &.bg--aside {
+        .bg--aside;
+    }
+    &.bg--canvas {
+        .bg--canvas;
+    }
+}
+
+.modal__footer {
+    .justify-content--end;
+    .padding--md;
+    .minor;
+    .bg--aside;
+    .btn {
+        .margin-l--sm;
+        .btn-min-width--md;
+    }
+}
+
+.modal--stretch {
+	width: ~"calc(100% - @{gap--xl} * 2)";
+	height: 100vh;
+}
+
+.modal--stretch-vertical{
+    .top;
+    .bottom--xxl;
+}
+
+.modal--sm {
+    width: 350px;
+	height: 768px;
+}
+
+.modal--md {
+    width: 450px;
+	height: 768px;
+}
+.modal--lg {
+    width: 800px;
+	height: 768px;
+}
+.modal--xl {
+    width: 1024px;
+    height: 768px;
+	@media @screen-width--max--md {
+        width: 960px;
+    }
+}
+.modal--width-auto{
+    width: auto;
+}
+.modal--width-xs {
+    width: 300px;
+}
+.modal--width-sm {
+    width: 400px;
+}
+.modal--width-md {
+    width: 600px;
+}
+.modal--width-lg {
+    width: 800px;
+}
+
+.modal--xxl {
+    width: 100%;
+    max-width: 1200px;
+    @media (max-width: 1300px) {
+        width: ~"calc(100% - (@{gap--md} * 2))";
+    }
+    @media (max-height: 900px) {
+        .margin-v--md;
+    }
+}
+.modal--width-xl {
+    .width--macro--xxs;
+    width: @macro--xxs;
+}
+
+.modal--full {
+    margin: 0;
+    padding: 0;
+    .absolute-stretch;
+
+}
+
+.modal__header {
+    .z-index--1;
+    .flex--0;
+}
+
+.modal__header--borderless {
+    margin: -1px -1px 0 -1px;
+}
+
+.modal__body--height--xs {
+    height: 60px
+}
+
+.modal__body--height--sm {
+    height: 90px
+}
+
+.modal__body--height--md {
+    height: 140px
+}
+
+.modal__body--height--lg {
+    height: 210px
+}
+
+.modal__body--height--xl {
+    height: 320px
+}
+
+.modal__body--height--xxl {
+    height: 480px
+}
+
+.modal__footer--blank {
+    .bg--content;
+}
+
+.modal--height-xl {
+    height: 768px;
+}

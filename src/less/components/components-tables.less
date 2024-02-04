@@ -1,0 +1,682 @@
+table {
+    max-width: 100%;
+    background-color: @table-bg;
+}
+
+th {
+    text-align: left;
+    font-weight: normal;
+    font-family: @font--base;
+}
+
+tbody {
+    .bg--content;
+}
+
+tr {
+    &.selected {
+        .bg--selected;
+    }
+}
+
+.tr--error {
+    td {
+        background-color: var(--color-error--weaker);
+    }
+}
+
+.table {
+    .table--md;
+    width: 100%;
+    &.table--width-auto {
+        width: auto;
+    }
+    tbody,
+    tfoot,
+    thead {
+        >tr {
+            >td,
+            >th {
+                padding: 0.5em;
+                &:first-child {
+                    padding-left: 1em;
+                }
+                &:last-child {
+                    padding-right: 1em;
+                }
+            }
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--color-border-weak);
+            }
+        }
+    }
+    thead>tr>th {
+        color: var(--color-text-inverted-medium);
+        background-color: var(--color-primary);
+        vertical-align: bottom;
+        &.th--border-b-none {
+            border-bottom: none;
+        }
+    }
+    caption+thead,
+    colgroup+thead,
+    thead:first-child {
+        tr:first-child {
+            th,
+            td {
+                border-top: 0;
+            }
+        }
+    }
+    tbody+tbody {
+        border-top: 2px solid var(--color-border-weak);
+    }
+}
+
+.table--rows-height-xs {
+    tbody,
+    tfoot,
+    thead {
+        >tr {
+            >td,
+            >th {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+.table--rows-height-sm {
+    tbody,
+    tfoot,
+    thead {
+        >tr {
+            >td,
+            >th {
+                padding-top: 0.25em;
+                padding-bottom: 0.25em;
+            }
+        }
+    }
+}
+.table--rows-height-md {
+    tbody,
+    tfoot,
+    thead {
+        >tr {
+            >td,
+            >th {
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+        }
+    }
+}
+.table--rows-height-lg {
+    tbody,
+    tfoot,
+    thead {
+        >tr {
+            >td,
+            >th {
+                padding-top: 0.75em;
+                padding-bottom: 0.75em;
+            }
+        }
+    }
+}
+.table--rows-height-lg {
+    tbody,
+    tfoot,
+    thead {
+        >tr {
+            >td,
+            >th {
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        }
+    }
+}
+
+.table-condensed,
+.table--condensed {
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+            >th,
+            >td {
+                padding: @table-condensed-cell-padding;
+            }
+        }
+    }
+}
+
+.table-bordered,
+.table--bordered {
+    border: 1px solid var(--color-border-weak);
+    >thead,
+    >tbody,
+    >tfoot {
+        >tr {
+            >th,
+            >td {
+                border: 1px solid var(--color-border-weak);
+            }
+        }
+    }
+    >thead {
+        >tr {
+            >th,
+            >td {
+                border-bottom-width: 2px;
+            }
+        }
+    }
+}
+
+.table-striped,
+.table--striped {
+    >tbody {
+        >tr:nth-child(odd) {
+            >td,
+            >th {
+                background-color: @table-bg-accent;
+            }
+        }
+    }
+}
+
+.table-hover,
+.table--hover {
+    >tbody {
+        >tr {
+            &:hover,
+            &.hover {
+                >td,
+                >th {
+                    background-color: @table-bg-hover;
+                }
+            }
+        }
+    }
+}
+
+.table--footerless {
+    >tbody {
+        >tr:last-child {
+            >td,
+            >th {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+table col[class*="col-"] {
+    float: none;
+    display: table-column;
+}
+
+table {
+    td,
+    th {
+        &[class*="col-"] {
+            float: none;
+            display: table-cell;
+        }
+    }
+}
+
+@media (max-width: @screen-sm) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        border: 1px solid var(--color-border-weak);
+        >.table {
+            margin-bottom: 0;
+            .bg--content;
+            >thead,
+            >tbody,
+            >tfoot {
+                >tr {
+                    >th,
+                    >td {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        >.table-bordered {
+            border: 0;
+            >thead,
+            >tbody,
+            >tfoot {
+                >tr {
+                    >th:first-child,
+                    >td:first-child {
+                        border-left: 0;
+                    }
+                    >th:last-child,
+                    >td:last-child {
+                        border-right: 0;
+                    }
+                }
+                >tr:last-child {
+                    >th,
+                    >td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table--secondary {
+    thead {
+        tr {
+            th {
+                font-family: @font--base;
+                font-weight: 100;
+                .text-color--strongest;
+                .bg--canvas;
+            }
+        }
+    }
+}
+
+.table--xxs {
+    margin-bottom: 0;
+    font-size: @text--xxs;
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+            >th,
+            >td {
+                line-height: 1em;
+            }
+        }
+    }
+}
+
+.table--xs {
+    margin-bottom: initial;
+    font-size: @text--xs;
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+            >th,
+            >td {
+                line-height: 1em;
+            }
+        }
+    }
+}
+
+.table--sm {
+    margin-bottom: initial;
+    font-size: @text--sm;
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+            >th,
+            >td {
+                line-height: 1em;
+            }
+        }
+    }
+}
+
+.table--md {
+    font-size: @text--md;
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+            >th,
+            >td {
+                line-height: 1.5em;
+            }
+        }
+    }
+}
+
+.table--lg {
+    margin-bottom: initial;
+    font-size: @text--lg;
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+            >th,
+            >td {
+                line-height: 1.5em;
+            }
+        }
+    }
+}
+
+.table {
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+            >td.td--no-padding {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.table-layout--fixed {
+    table-layout: fixed;
+}
+
+.table-hover,
+.table--hover {
+    >tbody {
+        >tr {
+            &:hover,
+            &.hover {
+                >td,
+                >th {
+                    .bg--hover;
+                }
+            }
+        }
+    }
+}
+
+.table--tertiary {
+    border: none;
+    thead {
+        tr {
+            .border--b;
+            .border--weak;
+            th{
+                font-family: @font--base;
+                background-color: transparent;
+                .font--medium;
+                .text-color--strongest;
+                // .text--uppercase;
+                // font-size: ~"calc(7/8 * 1em)"; // 7/8 compensation for the uppercasification
+                line-height: 1.2em;
+                &:first-child {
+                    padding-left: 1.2em;
+                }
+                &:last-child {
+                    padding-right: 1.2em;
+                }
+            }
+        
+        th *{
+            .text-html;
+            text-transform: initial;
+            &.btn{
+                .btn;
+            }
+            &.btn--xxs{
+                .btn--xxs;
+            }
+            &.btn--error{
+                .btn--error;
+            }
+            &.btn--success{
+                .btn--success;
+            }
+            &.btn--primary{
+                .btn--primary;
+            }
+            &.btn--alert{
+                .btn--alert;
+            }
+            &.btn--info{
+                .btn--info;
+            }
+            &.btn--secondary{
+                .btn--secondary;
+            }
+            }
+        }
+    }
+    tbody {
+        background-color: transparent;
+    }
+}
+
+.table--vertical-lines {
+    td,
+    th {
+        &:not(:last-child) {
+            .border--r;
+        }
+    }
+    tr {
+        &:not(:last-child) {
+            .border--b;
+        }
+    }
+}
+
+.table--class-names {
+    td {
+        font-family: monospace;
+        font-weight: bold;
+        color: rgb(240, 0, 0);
+    }
+}
+
+.table {
+    &.table--padded--lg {
+        tr {
+            td,
+            th {
+                .padding-h--lg;
+            }
+        }
+    }
+}
+
+.table--header--primary {
+    thead {
+        tr {
+            th {
+                color: var(--color-text-inverted-strongest);
+                .bg--primary;
+            }
+        }
+    }
+}
+
+.table--header--success {
+    thead {
+        tr {
+            th {
+                color: var(--color-text-inverted-strongest);
+                .bg--success;
+            }
+        }
+    }
+}
+
+.table--header--error {
+    thead {
+        tr {
+            th {
+                color: var(--color-text-inverted-strongest);
+                .bg--error;
+            }
+        }
+    }
+}
+
+.table--header--warning {
+    thead {
+        tr {
+            th {
+                color: var(--color-text-inverted-strongest);
+                .bg--warning;
+            }
+        }
+    }
+}
+
+.table--header--info {
+    thead {
+        tr {
+            th {
+                color: var(--color-text-inverted-strongest);
+                .bg--info;
+            }
+        }
+    }
+}
+
+thead {
+    tr {
+        &.tr--primary {
+            th {
+                color: var(--color-text-inverted-strongest);
+                .bg--primary;
+                border: none;
+                text-transform: none;
+            }
+        }
+        &.tr--content {
+            th {
+                .bg--content;
+            }
+        }
+        &.tr--secondary {
+            th {
+                color: var(--color-text-inverted-strongest);
+                .bg--secondary;
+                border: none;
+                text-transform: none;
+            }
+        }
+        th {
+            &.th--primary {
+                color: var(--color-text-inverted-strongest);
+                .bg--primary;
+                border: none;
+                text-transform: none;
+            }
+        }
+        th {
+            &.th--secondary {
+                color: var(--color-text-inverted-strongest);
+                .bg--secondary;
+                border: none;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+.table--header-xs {
+    th {
+        .text--xs;
+        word-break: break-all; // TODO remove
+    }
+}
+
+thead.thead--bg-secondary {
+    tr {
+        th {
+            .bg--secondary;
+            color: var(--color-text-inverted-strongest);
+        }
+    }
+}
+
+thead.thead--bg-canvas {
+    tr {
+        th {
+            .bg--canvas;
+        }
+    }
+}
+
+thead.thead--bg-aside {
+    tr {
+        th {
+            .bg--aside;
+        }
+    }
+}
+
+thead.thead--bg-content {
+    tr {
+        th {
+            .bg--content;
+        }
+    }
+}
+
+.table--hover-content {
+    >tbody {
+        >tr:hover {
+            >td,
+            >th {
+                .bg--content;
+            }
+        }
+    }
+}
+
+.tr--disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.table--forms {
+    tbody>tr>td,
+    tbody>tr>th,
+    tfoot>tr>td,
+    tfoot>tr>th,
+    thead>tr>td,
+    thead>tr>th {
+        &:last-child {
+            padding-right: 0;
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+    thead {
+        tr {
+            border: none;
+            th {
+                font-family: @font--base;
+                background-color: transparent;
+                .font--medium;
+                .text-color--strongest;
+                .text--uppercase;
+                font-size: ~"calc(7/8 * 1em)";
+                line-height: 1.2em;
+            }
+        }
+    }
+    tbody {
+        >tr:not(:last-child) {
+            border-bottom: none;
+        }
+        background-color: transparent;
+        td {
+            .white-space--nowrap!important;
+            input[type="text"] {
+                &.input--width-auto {
+                    .width--100;
+                }
+            }
+        }
+    }
+}

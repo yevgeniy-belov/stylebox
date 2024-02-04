@@ -1,0 +1,10 @@
+<div ng-if="type === 'outline'" class="margin-b--lg" ng-repeat="type in buttonsData.types">
+	<div class="margin-b--xl" ng-repeat="power in buttonsData.powers">
+		<div class="
+	        btn
+	        btn--{{size}}
+	        btn--{{power}}
+	        btn--{{type}}
+		    margin-r--lg" ng-repeat="size in buttonsData.sizes">{{buttonsData.string}} </div>
+	</div>
+</div>

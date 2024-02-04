@@ -1,0 +1,183 @@
+
+<div class="inline-flex align-items--center bg--content radius--full shadow--sm shadow--weak padding--3xs">
+    <span class="icon-link icon-size--24 padding--xs bg--alert icon-color-inverted-strongest radius--full"></span>
+    <div class="margin-h--sm text--sm">If you are not familiar with Flexbox, be sure to read <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>.</div>
+</div>
+<h3>Main classes</h3>
+<p>The purpose of the main classes is building nested layouts.</p>
+<div class="padding--lg bg--content margin-b--lg">
+    <div class="bem-class bem-class--box">.rows</div>
+    <p class="margin-b--lg">.rows is one of the main layaout classes. Use it when you want to arange the itms inside as rows.</p>
+    <div class="rows">
+        <div class="bg--canvas padding--xs margin--sm">One</div>
+        <div class="bg--canvas padding--xs margin--sm">Two</div>
+        <div class="bg--canvas padding--xs margin--sm">Three</div>
+    </div>
+</div>
+<div class="padding--lg bg--content margin-b--lg">
+    <div class="bem-class bem-class--box">.cols</div>
+    <p class="margin-b--lg">
+        .cols is one of the main layaout classes. Use it when you want to arange the itms inside as <b>columns</b>.
+    </p>
+    <div class="cols">
+        <div class="bg--canvas padding--xs margin--sm">One</div>
+        <div class="bg--canvas padding--xs margin--sm">Two</div>
+        <div class="bg--canvas padding--xs margin--sm">Three</div>
+    </div>
+</div>
+<div class="padding--lg bg--content margin-b--lg">
+    <div class="bem-class bem-class--box">.major</div>
+    <p>.major is one of the main layaout classes. Use it for <b>resizible</b> sections beside the fixed sections.
+        <br> If you need to insert additional layout do it inside major section.
+    </p>
+</div>
+<div class="padding--lg bg--content margin-b--lg">
+    <div class="bem-class bem-class--box">.minor</div>
+    <p>.minor is one of the main layaout classes. Use it for <b>fixed</b> size sections like <b>headers</b>, <b>toolbars</b>, <b>sidebars</b> etc.</p>
+</div>
+<div class="row margin-b--xl">
+    <div class="col-md-4">.rows
+        <div class="rows border height--lg">
+            <div class="bg--content border padding--xs margin--3xs minor">.minor</div>
+            <div class="bg--content border padding--xs margin--3xs major">.major</div>
+        </div>
+    </div>
+    <div class="col-md-4">.cols
+        <div class="cols border height--lg">
+            <div class="bg--content border padding--xs margin--3xs minor">.minor</div>
+            <div class="bg--content border padding--xs margin--3xs major">.major</div>
+        </div>
+    </div>
+    <div class="col-md-4">.cols inside major row.
+        <div class="rows border height--lg">
+            <div class="bg--content border padding--xs margin--3xs minor">.minor</div>
+            <div class="bg--content border padding--xs margin--3xs major">
+                <div class="cols border">
+                    <div class="bg--content border padding--xs margin--3xs minor">.minor</div>
+                    <div class="bg--content border padding--xs margin--3xs major">.major</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="padding--lg bg--content margin-b--lg">
+    <div class="bem-class bem-class--box-modifier">.flex--0</div>
+    <p>Use .flex--0 for sections that shouldn't grow and shink. It's very similar to <b>.minor</b> but without the <b>"display: flex"</b> declaration.</p>
+</div>
+<div class="padding--lg bg--content margin-b--lg">
+    <div class="bem-class bem-class--box-modifier">.flex--1</div>
+    <p>Use .flex--1 for sections that should grow and shink. It's very similar to <b>.major</b> but without the <b>"display: flex"</b> declaration.
+    </p>
+</div>
+<div class="padding--lg bg--content margin-b--lg">
+    <div class="flex">
+        <div class="bem-class bem-class--box">.major</div> &
+        <div class="bem-class bem-class--box margin-l--sm">.minor</div> vs
+        <div class="bem-class bem-class--box--modifier  margin-l--sm">.flex--1</div> &
+        <div class="bem-class bem-class--box--modifier margin-l--sm">.flex--0</div>
+    </div>
+    <p>Use .major or .minor classes only for sections that contains another layout inside.
+        <br> The .flex--1 or .flex--0 should be used for sections that contains content itself like paragraphs, lists, tables etc.
+        <br> There are many cases where sections may have a "flex" display mode (toolbar needs it for easy icons centering), for that you can use the .minor class but in terms of readability it's prefferable to use two classes - .flex and .flex--0.
+</div>
+<div class="row margin-b--xl">
+    <div class="col-md-4">.rows
+        <div class="rows border height--lg">
+            <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+            <div class="bg--content border padding--xs margin--3xs flex--1">.flex--1</div>
+        </div>
+    </div>
+    <div class="col-md-4">.cols
+        <div class="cols border height--lg">
+            <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+            <div class="bg--content border padding--xs margin--3xs flex--1">.flex--1</div>
+        </div>
+    </div>
+    <div class="col-md-4">.cols inside flex--1 row.
+        <div class="rows border height--lg">
+            <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+            <div class="bg--content border padding--xs margin--3xs flex--1">
+                <div class="cols border">
+                    <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+                    <div class="bg--content border padding--xs margin--3xs flex--1">.flex--1</div>
+                </div>
+            </div>
+        </div>
+        As you can see, sections inside non display-flex sections didn't catch the whole available space.
+    </div>
+</div>
+<div class="inline-flex align-items--center bg--content radius--full shadow--sm shadow--weak padding--3xs">
+    <span class="icon-stylebox icon-size--24 padding--xs bg--alert icon-color-inverted-strongest radius--full"></span>
+    <div class="margin-h--sm text--sm">You can find more layout classes here: <i class="bg--canvas padding-h--sm padding-v--xxs margin-l--xxs text--monospace radius--full">stylebox/src/less/flex-layout.less</i></div>
+</div>
+<br>
+<br>
+<h3>More examples</h3>
+<div class="row margin-b--xl">
+    <div class="col-md-4">.rows
+        <div class="rows border height--xl">
+            <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+            <div class="bg--content border padding--xs margin--3xs flex--1">.flex--1</div>
+            <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+        </div>
+    </div>
+    <div class="col-md-4">.cols
+        <div class="cols border height--xl">
+            <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+            <div class="bg--content border padding--xs margin--3xs flex--1">.flex--1</div>
+            <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+        </div>
+    </div>
+    <div class="col-md-4">.cols inside major row.
+        <div class="rows border height--xl">
+            <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+            <div class="bg--content border padding--xs margin--3xs major">
+                <div class="cols border">
+                    <div class="bg--content border padding--xs margin--3xs flex--0">.flex--0</div>
+                    <div class="bg--content border padding--xs margin--3xs flex--1">.flex--1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row margin-b--xl">
+    <div class="col-md-4 margin-b--xl">
+        <div class="rows border height--xl shadow--lg shadow--weak">
+            <div class="bg--aside flex--0 padding--sm">Header</div>
+            <div class="bg--content border--h flex--1 overflow--auto padding--lg">{{strings.lorem500}}</div>
+            <div class="bg--aside flex--0  padding--sm">Footer</div>
+        </div>
+    </div>
+    <div class="col-md-8 margin-b--xl">
+        <div class="rows border height--xl shadow--lg shadow--weak">
+            <div class="bg--aside flex--0 padding--sm">Header</div>
+            <div class="major">
+                <div class="cols border--h">
+                    <div class="bg--aside flex--0 padding--3xs">
+                        <div class="btn btn--icon btn--integrated">
+                            <div class="icon-new"></div>
+                        </div>
+                        <div class="btn btn--icon btn--integrated">
+                            <div class="icon-folder"></div>
+                        </div>
+                        <div class="btn btn--icon btn--integrated">
+                            <div class="icon-edit"></div>
+                        </div>
+                        <div class="btn btn--icon btn--integrated">
+                            <div class="icon-comments"></div>
+                        </div>
+                        <div class="btn btn--icon btn--integrated">
+                            <div class="icon-test"></div>
+                        </div>
+                    </div>
+                    <div class="bg--content border--v flex--1 overflow--auto padding--lg">{{strings.lorem500}}</div>
+                    <div class="bg--aside rows flex--0 width--lg">
+                        <div class="flex--0 bg--canvas padding--sm border--b">Preview header</div>
+                        <div class="flex--1 overflow--auto padding--md">{{strings.lorem100}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg--aside flex--0  padding--sm">Footer</div>
+        </div>
+    </div>
+</div>

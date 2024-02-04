@@ -1,0 +1,23 @@
+<div class="rows bg--primary">
+	<div class=" margin-v--3xl">
+		<div class="page">
+			<div class="text--5xl text-block font--thin text-color--opposite margin-b--xl">Stylebox</div>
+			<div class="text--xxl text-block font--thin text-color--opposite">Components library for building web applications.</div>
+		</div>
+	</div>
+</div>
+<div class="page padding-v--xl">
+	<div class="grid grid--guttered--lg grid--flexy-items">
+		<div class="grid__item col--sm--4" ng-repeat="example in componentsData | filter:{tags:'representative'}" ui-sref="components({component: example.category})">
+			<div class="major">
+				<div class="example rows on-hover--pop transition--xs {{example.exampleHelpers}}">
+					<div class=" border--weaker padding-h--sm padding-v--xs bg--aside">
+						<div class="text--lg" title="{{example.fileName}}">{{example.name}}</div>
+						<div class="">{{example.description}}</div>
+					</div>
+					<div class="example__body flex--1 padding--lg bg--content  {{example.bodyHelpers}}" ng-include="'components/' + example.fileName + '.tpl.html'"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

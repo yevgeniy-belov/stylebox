@@ -1,0 +1,39 @@
+{
+    "background": [
+        {"name": "primary"},
+        {"name": "secondary"},
+        {"name": "info"},
+        {"name": "standout"},
+        {"name": "success"},
+        {"name": "warning"},
+        {"name": "error"},
+        {"name": "selected"},
+        {"name": "content"},
+        {"name": "aside"},
+        {"name": "canvas"},
+        {"name": "draggable"},
+        {"name": "temporary"}
+
+    ],
+    "backgroundWithOpacities": [
+        {"name": "primary"},
+        {"name": "secondary"},
+        {"name": "content"},
+        {"name": "aside"},
+        {"name": "canvas"},
+        {"name": "info"},
+        {"name": "selected"},
+        {"name": "standout"},
+        {"name": "success"},
+        {"name": "warning"},
+        {"name": "error"}
+
+    ],
+    "transparentBackground": [
+        {"name": "transparent--weakest"},
+        {"name": "transparent--weak"},
+        {"name": "transparent"},
+        {"name": "transparent--strong"},
+        {"name": "transparent--strongest"}
+    ]
+}

@@ -1,0 +1,13 @@
+<div class="grid grid--guttered--xl flex-direction--column">
+    <div class="grid__item" ng-repeat="(fontFamily, value) in typographyData.fontFamilies">
+        <div class="grid grid--guttered--xl">
+            <div class="grid__item col--sm--4" ng-repeat="weight in value.weights">
+                <div class="" ng-repeat="size in typographyData.sizes" ng-if="size !==''">
+                    <div class="font--{{weight}} text--{{size}} text-block margin-b--lg">
+                        <div class="text-block__text ellipsis">Type</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

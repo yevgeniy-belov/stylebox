@@ -1,0 +1,151 @@
+.input-block {
+    .height--xxs;
+	.minor;
+	&.flex--1{
+        .flex--1;
+    }
+    &.input-block--xs {
+        height: 20px;
+        input[type="text"], .input-block__controls{
+            height: 20px;
+            .text--sm;
+        }
+        .btn{
+            .btn--xxs;
+        }
+    }
+    &.input-block--sm {
+        height: 25px;
+        input[type="text"], .input-block__controls{
+		    height: 25px;
+        }
+        .btn{
+            .btn--sm;
+        }
+    }
+}
+.input-block__controls--start{
+    order: -1;
+}
+.input-block--integrated-controls {
+	.input-block__input {
+        border-right: none;
+        &[type="text"]{
+		    height: unset;
+	    }
+    }
+
+
+	.input-block__controls {
+		.bg--content;
+	}
+    .input-block__input--middle {
+        border-left: none;
+    }
+	.input-block__controls--start {
+		.border--l;
+		.border--strong;
+	}
+	input:focus ~ .input-block__controls {
+		.border--info;
+	}
+}
+
+.input-block--compact {
+	border: none;
+
+	.input-block__input {
+		border: none;
+		.border--b;
+
+		&:focus {
+			outline: none;
+			border-color: var(--color-accent);
+		}
+	}
+
+	.dropdown {
+		.btn {
+			border: none;
+		}
+	}
+}
+
+.input-block--paper {
+	&.input-block {
+		border: none;
+		background: none;
+	}
+
+	.input-block__input {
+		.input--paper;
+	}
+}
+
+.input-block__input {
+	.flex--1;
+	min-width: 0;
+	// border: none;
+}
+
+.input-block__controls {
+	.flex;
+	.flex--0;
+
+	&:last-child {
+		.border--r;
+		.border--strong;
+	}
+	.border--h;
+	.border--strong;
+
+	&:first-child {
+		.border--l;
+		.border--strong;
+	}
+}
+
+.separate {
+	&:not(:first-child) {
+		.btn--integrated {
+			.border--l;
+		}
+	}
+
+	&:not(:last-child) {
+		.btn--integrated {
+			.border--r;
+		}
+    }
+    .input-block__controls--start& {
+        &+.input-block__input{
+            border-left: none;
+        }
+        &:not(:last-child) {
+            .btn--integrated {
+                .border--r;
+            }
+        }
+
+        &:not(:first-child) {
+            .btn--integrated {
+                .border--l;
+            }
+        }
+    }
+}
+
+.input-block--integrated {
+	border: none;
+}
+
+.input-block--mandatory {
+	&:before {
+		font-size: 24px;
+		content: '*';
+		color: var(--color-error);
+		.padding-t--xs;
+		position: absolute;
+		left: -@gap--md;
+	}
+}

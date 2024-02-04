@@ -1,0 +1,271 @@
+//
+// Forms
+// --------------------------------------------------
+// Normalize non-controls
+//
+// Restyle and baseline non-control form elements.
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: @line-height-computed;
+    font-size: calc(var(--font-size-base) * 1.5);
+    line-height: inherit;
+    color: @legend-color;
+    border: 0;
+    border-bottom: 1px solid @legend-border-color;
+}
+
+label {
+    display: inline-block;
+    // margin-bottom: 5px;
+    // font-weight: bold;
+}
+
+// Normalize form controls
+// Override content-box in Normalize (* isn't specific enough)
+input{
+    .bg--content;
+    &::-ms-clear {
+        display:none;
+    }
+}
+
+
+input[type="search"] {
+    .box-sizing(border-box);
+}
+
+// Position radios and checkboxes better
+input[type="radio"],
+input[type="checkbox"] {
+    line-height: normal;
+}
+
+// Set the height of select and file controls to match text inputs
+input[type="file"] {
+    display: block;
+}
+
+// Make multiple select elements height not fixed
+select[multiple],
+select[size] {
+    height: auto;
+}
+
+// Fix optgroup Firefox bug per https://github.com/twbs/bootstrap/issues/7611
+select optgroup {
+    font-size: inherit;
+    font-style: inherit;
+    font-family: inherit;
+}
+
+// Focus for select, file, radio, and checkbox
+input[type="file"]:focus,
+input[type="radio"]:focus {
+    .tab-focus();
+}
+
+// Fix for Chrome number input
+// Setting certain font-sizes causes the `I` bar to appear on hover of the bottom increment button.
+// See https://github.com/twbs/bootstrap/issues/8350 for more.
+input[type="number"] {
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        height: auto;
+    }
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    float: left;
+    margin-left: -20px;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+    margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+}
+
+// Radios and checkboxes on same line
+.radio-inline,
+.checkbox-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    margin-top: 0;
+    margin-left: 10px; // space out consecutive inline controls
+}
+
+// Apply same disabled cursor tweak as for inputs
+//
+// Note: Neither radios nor checkboxes can be readonly.
+input[type="radio"],
+input[type="checkbox"],
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline {
+    &[disabled], fieldset[disabled] & {
+        cursor: not-allowed;
+    }
+}
+
+// Help text
+//
+// Apply to any element you wish to create weak text for placement immediately
+// below a form control. Use for general help, formatting, or instructional text.
+.help-block {
+    display: block; // account for any element using help-block
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #767676; // lighten the text some for contrast
+}
+
+// Inline forms
+//
+// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// forms begin stacked on extra small (mobile) devices and then go inline when
+// viewports reach <768px.
+//
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
+//
+// Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
+.form-inline {
+    // Kick in the inline
+    @media (min-width: @screen-tablet) {
+        // Inline-block all the things for "inline"
+        .form-group {
+            display: inline-block;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+        // Remove default margin on radios/checkboxes that were used for stacking, and
+        // then undo the floating of radios and checkboxes to match (which also avoids
+        // a bug in WebKit: https://github.com/twbs/bootstrap/issues/1969).
+        .radio,
+        .checkbox {
+            display: inline-block;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+        .radio input[type="radio"],
+        .checkbox input[type="checkbox"] {
+            float: none;
+            margin-left: 0;
+        }
+    }
+}
+
+.editable-textarea {
+    width: 100%;
+}
+
+.form__input {
+    .width--whole;
+}
+
+.form--md {
+    .form__input {
+        height: @regular-controlers-height;
+    }
+}
+
+.btn--input-type--file {
+    .relative;
+    input[type="file"] {
+        // opacity: 0;
+        .bg--alert;
+        .absolute-stretch;
+    }
+}
+/*------------------------*/
+
+
+.separate {
+    &:not(:first-child) {
+        .btn--integrated {
+            .border--l;
+        }
+    }
+    &:not(:last-child) {
+        .btn--integrated {
+            .border--r;
+        }
+    }
+}
+
+.form__group {
+    .margin-b--md;
+}
+
+.form__control {
+    .block;
+    .width--100;
+    line-height: 2em;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.form__label {
+    .text--sm;
+    margin-bottom: 3px;
+}
+
+.form--compact {
+    .form__control {
+        background: transparent;
+        border: none;
+        padding-left: 0;
+        .border--b;
+        &:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+        .dropdown {
+            .btn {
+                border: none;
+            }
+        }
+    }
+}
+.input--focus-shadow{
+	&:focus{
+		.shadow--sm;
+		.shadow--weak;
+	}
+}
+
+.required-indication-area{
+    .inline-block;
+    width: 9px;
+}
+
+.required-indication-area.required{
+    color: var(--color-error);
+    &:before {
+        content: '*';
+    }
+}
+.resize--none {
+    resize: none;
+}
+
+.resize--vertical {
+    resize: vertical;
+}

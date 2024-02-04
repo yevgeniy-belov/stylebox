@@ -1,0 +1,34 @@
+.outline {outline: @border-width solid var(--color-border-medium);}
+.outline--dashed {outline-style: dashed;}
+.outline--dotted {outline-style: dotted;}
+
+.outline-color-primary {outline-color: var(--color-primary);}
+.outline-color-secondary {outline-color: var(--color-secondary);}
+.outline-color-success {outline-color: var(--color-success);}
+.outline-color-info {outline-color: var(--color-info);}
+.outline-color-warning {outline-color: var(--color-warning);}
+.outline-color-error {outline-color: var(--color-error);}
+
+.outline--weakest{outline-color: var(--color-border-weakest);}
+.outline--weaker{outline-color: var(--color-border-weaker);}
+.outline--weak{outline-color: var(--color-border-weak);}
+.outline--strong{outline-color: var(--color-border-strong);}
+.outline--stronger{outline-color: var(--color-border-stronger);}
+.outline--strongest{outline-color: var(--color-border-strongest);}
+
+.outline--color-invert{
+	&[class*="border--"]{
+		border-color: var(--color-border-inverted);
+	}
+	&.outline--weakest{outline-color: var(--color-border-inverted-weakest);}
+	&.outline--weaker{outline-color: var(--color-border-inverted-weaker);}
+	&.outline--weak{outline-color: var(--color-border-inverted-weak);}
+	&.outline--strong{outline-color: var(--color-border-inverted-strong);}
+	&.outline--stronger{outline-color: var(--color-border-inverted-stronger);}
+	&.outline--strongest{outline-color: var(--color-border-inverted-strongest);}
+}
+.outline--bold{outline-width: 2px;}
+.outline--bolder{outline-width: 3px;}
+.outline--boldest{outline-width: 5px;}
+
+.outline--none{outline: none;}

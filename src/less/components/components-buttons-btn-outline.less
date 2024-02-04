@@ -1,0 +1,41 @@
+.btn--outline {// Bump specificity to trump filled buttons
+    border: none;
+    background: none;
+	.text-color--medium;
+	outline: 2px solid var(--color-border-medium);
+    outline-offset: -2px;
+	.transition--xs;
+    .btn--inverted&{
+        .text-color-inverted--strong;
+    }
+	&:hover,&.hover{
+		.text-color--strong;
+        outline-offset: -3px;
+        outline-width: 3px;
+        background-color: unset;
+        .btn--inverted&{
+        .text-color-inverted--strongest;
+    }
+	}
+	&:active,&.active{
+		.text-color--strongest;
+        .btn--inverted&{
+            .text-color-inverted--strongest;
+        }
+        outline: 2px solid var(--color-border-medium);
+        outline-offset: -2px;
+	}
+	&:active,&.active{background: var(--color-border-weak)}
+    &.btn--xxs {outline-width: 1px;outline-offset: -1px;&:hover,&.hover {outline-width: 2px;outline-offset: -2px}};
+    &.btn--xs { outline-width: 1px;outline-offset: -1px;&:hover,&.hover {outline-width: 2px;outline-offset: -2px}};
+    &.btn--sm { outline-width: 1px;outline-offset: -1px;&:hover,&.hover {outline-width: 2px;outline-offset: -2px}};
+    &.btn--md { outline-width: 2px;outline-offset: -2px;&:hover,&.hover {outline-width: 4px;outline-offset: -4px}};
+    &.btn--lg { outline-width: 3px;outline-offset: -3px;&:hover,&.hover {outline-width: 5px;outline-offset: -5px}};
+    &.btn--xl { outline-width: 4px;outline-offset: -4px;&:hover,&.hover {outline-width: 6px;outline-offset: -6px}};
+    &.btn--xxl {outline-width: 6px;outline-offset: -6px;&:hover,&.hover {outline-width: 8px;outline-offset: -8px}};
+
+	&.btn--success{outline-color: var(--color-success);&:active,&.active{background-color: var(--color-success-opacity-strongest)}}
+	&.btn--primary{outline-color: var(--color-primary);&:active,&.active{background-color: var(--color-primary-opacity-strongest)}}
+	&.btn--error  {outline-color: var(--color-error);&:active,&.active{background-color: var(--color-error-opacity-strongest)}}
+	&.btn--warning{outline-color: var(--color-warning);&:active,&.active{background-color: var(--color-warning-opacity-strongest)}}
+}

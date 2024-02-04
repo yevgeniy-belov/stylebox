@@ -1,0 +1,61 @@
+.btn--integrated {
+    .align-items--center;
+    .justify-content--center;
+    .flex;
+    .align-self--stretch;
+    .flex(0, 1, auto);
+    border-radius: 0;
+    line-height: auto;
+    box-shadow: none;
+    vertical-align: center;
+    background: transparent;
+    border: none;
+    &:hover,&.hover {
+        box-shadow: none;
+        .bg--hover;
+    }
+    &:active,&.active{
+        background-color: var(--color-pressed);
+    }
+    &.selected,
+    &.open {
+        .bg--selected;
+    }
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    &.btn--accent {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-width: 0 1px 0 0;
+        color: var(--color-opposite);
+        [class*="icon-"] {
+            color: var(--color-opposite);
+        }
+        &.open {
+
+        }
+        background-color: var(--color-accent);
+        &:hover {
+            background-color: var(--color-accent-dark);
+        }
+        &:hover:active {
+            background-color: var(--color-accent-darker);
+        }
+    }
+    &.btn.disabled,
+    &.btn[disabled],
+    &fieldset[disabled] .btn {
+        box-shadow: none;
+    }
+}
+.btn--integrated {
+    &.radius--full {
+        .radius--full;
+    }
+}
+.btn--integrated {
+    &.align-self--center {
+        .align-self--center;
+    }
+}

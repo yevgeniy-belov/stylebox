@@ -1,0 +1,110 @@
+{
+    "sizes": [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl"
+    ],
+    "extendedSizes": [
+        "xxs",
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl"
+    ],
+    "gaps": [
+        "3xs",
+        "xxs",
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl",
+        "3xl"
+    ],
+    "backgrounds": [
+        "content",
+        "aside",
+        "canvas",
+        "engrave",
+        "temporary",
+        "primary",
+        "secondary",
+        "success",
+        "warning",
+        "error",
+        "selected",
+        "info",
+        "standout"
+    ],
+    "powers": [
+        "primary",
+        "secondary"
+    ],
+    "colors": [
+        "primary",
+        "secondary",
+        "info",
+        "standout",
+        "success",
+        "warning",
+        "error",
+        "structure"
+    ],
+    "statuses": [
+        "success",
+        "warning",
+        "error",
+        "info"
+    ],
+    "dimensions": [
+        "micro--xxs",
+        "micro--xs",
+        "micro--sm",
+        "micro--md",
+        "micro--lg",
+        "micro--xl",
+        "micro--xxl",
+        "xxs",
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl",
+        "macro--xxs",
+        "macro--xs",
+        "macro--sm",
+        "macro--md",
+        "macro--lg",
+        "macro--xl",
+        "macro--xxl"
+    ],
+    "states": [
+        "default",
+        "hover",
+        "active"
+    ],
+    "strength": [
+        "weakest",
+        "weaker",
+        "weak",
+        "medium",
+        "strong",
+        "stronger",
+        "strongest"
+    ],
+    "lightness": [
+        "lightest",
+        "lighter",
+        "light",
+        "",
+        "dark",
+        "darker",
+        "darkest"
+    ]
+}

@@ -1,0 +1,125 @@
+.badge {
+    display         : inline-block;
+    min-width       : 10px;
+    font-size       : @text--sm;
+    line-height     : 1.5em;
+    vertical-align  : center;
+    white-space     : nowrap;
+    text-align      : center;
+    border-radius   : 1em;
+    padding         : 0 0.5em;
+    pointer-events  : auto;
+
+    &.badge--tag {
+        .radius--xs;
+        padding-right: .3em;
+        padding-left: .3em;
+    }
+
+    & + .badge {
+        .margin-l--xxs;
+    }
+
+    // Empty badges collapse automatically (not available in IE8)
+    &:empty:not(.badge--notification) {
+        display: none;
+    }
+}
+
+.badge--hover {
+    box-sizing: border-box;
+
+    &:hover {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 2px #000000;
+    }
+}
+// Hover state, but only for links
+a.badge {
+    &:focus,
+    &:hover {
+        // color: @badge-link-hover-color;
+        text-decoration: none;
+        cursor         : pointer;
+    }
+}
+
+.badge {.badge-variant (var(--color-secondary))}
+.badge--tertiary {.badge-variant (var(--color-content), var(--color-text-medium), var(--color-border))}
+.badge--engrave {.badge-variant (var(--color-engrave), var(--color-text-medium), var(--color-border))}
+.badge--aside {.badge-variant (var(--color-aside), var(--color-text-medium), var(--color-border))}
+.badge--error {.badge-variant (var(--color-error))}
+.badge--success {.badge-variant (var(--color-success))}
+.badge--info {.badge-variant (var(--color-info))}
+.badge--primary {.badge-variant (var(--color-primary))}
+.badge--warning {.badge-variant (var(--color-warning))}
+
+.badge--xs {
+    line-height   : 1em;
+    padding-top   : 1px;
+    padding-bottom: 2px;
+    font-size     : @text--xs;
+
+    .badge--tag & {
+        .padding-h--xxs;
+    }
+
+    & + .badge {
+        margin-left: 2px;
+    }
+}
+
+.badge--sm {
+    line-height   : 1em;
+    padding-top   : 2px;
+    padding-bottom: 2px;
+    font-size     : @text--sm;
+}
+
+.badge--md {
+    font-size: @text--sm;
+}
+
+.badge--lg {
+    font-size: @text--md;
+}
+
+.badge--xl {
+    font-size: @text--lg;
+}
+
+.badge--notification-bar {
+    .badge--md;
+    .margin-r--sm;
+    .badge--error;
+}
+
+.badge--notification {
+    .z-index--1;
+    .absolute;
+    top     : -0.5em;
+    right   : -0.5em;
+}
+
+.secondary {
+    .badge {
+        border: 1px dashed #ffffff;
+    }
+}
+
+.badge--buttoned {
+    .flex;
+
+    .btn {
+        .radius--full;
+    }
+    padding-right: 0;
+
+}
+
+.badge--status--failed {
+    .badge--error;
+}
+
+.badge--status--passed {
+    .badge--success;
+}

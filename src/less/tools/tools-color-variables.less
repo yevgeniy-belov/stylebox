@@ -1,0 +1,43 @@
+.var(@object) {
+    // Declaring local variables to remove extra-spaces appearing before values comming from guards.
+    @n: @object[name];
+    @h: @object[h];
+    @s: @object[s];
+    @l: @object[l];
+    @a: @object[a];
+
+    @root: {
+        --h-@{n}: @h;
+        --s-@{n}: @{s}%;
+        --l-@{n}: @{l}%;
+        --a-@{n}: @{a}%;
+        --hs-@{n}: @h, @{s}%;
+        --hsl-@{n}: var(--hs-@{n}), var(--l-@n);
+
+        & when(@object[shades]) {
+            --color-@{n}-lightest: hsl(var(--h-@{n}),var(--s-@{n}), calc(var(--l-@{n}) * 1.6));
+            --color-@{n}-lighter: hsl(var(--h-@{n}),var(--s-@{n}), calc(var(--l-@{n}) * 1.4));
+            --color-@{n}-light: hsl(var(--h-@{n}),var(--s-@{n}), calc(var(--l-@{n}) * 1.2));
+            --color-@{n}: hsl(var(--h-@{n}),var(--s-@{n}),var(--l-@{n}));
+            --color-@{n}-dark: hsl(var(--h-@{n}),var(--s-@{n}), calc(var(--l-@{n}) * .8));
+            --color-@{n}-darker: hsl(var(--h-@{n}),var(--s-@{n}), calc(var(--l-@{n}) * .6));
+            --color-@{n}-darkest: hsl(var(--h-@{n}),var(--s-@{n}), calc(var(--l-@{n}) * .4));
+        }
+        
+        & when(@object[opacities]) {
+            --color-@{n}-opacity-weakest: hsla(var(--h-@{n}),var(--s-@{n}), var(--l-@{n}), calc(var(--a-@{n}) * .8));
+            --color-@{n}-opacity-weaker: hsla(var(--h-@{n}),var(--s-@{n}), var(--l-@{n}), calc(var(--a-@{n}) * .7));
+            --color-@{n}-opacity-weak: hsla(var(--h-@{n}),var(--s-@{n}), var(--l-@{n}), calc(var(--a-@{n}) * .6));
+            --color-@{n}-opacity-medium: hsla(var(--h-@{n}),var(--s-@{n}), var(--l-@{n}), calc(var(--a-@{n}) * .5));
+            --color-@{n}-opacity-strong: hsla(var(--h-@{n}),var(--s-@{n}), var(--l-@{n}), calc(var(--a-@{n}) * .4));
+            --color-@{n}-opacity-stronger: hsla(var(--h-@{n}),var(--s-@{n}), var(--l-@{n}), calc(var(--a-@{n}) * .3));
+            --color-@{n}-opacity-strongest: hsla(var(--h-@{n}),var(--s-@{n}), var(--l-@{n}), calc(var(--a-@{n}) * .2));
+        }
+    };
+
+    :root {
+        // Workaround for buggy? compilation of Less where
+        // the last mixin call, re-defines/overrides some (not all) of the guards values
+        @root();
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "sizes": [
+        "",
+        "xxs",
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+        "xxl"
+    ],
+    "powers": [
+        "default",
+        "primary",
+        "success",
+        "warning",
+        "error"
+    ],
+    "states": [
+        "default",
+        "hover",
+        "active"
+    ],
+    "types": [
+        "default",
+        "wired",
+        "outline",
+        "silent",
+        "integrated"
+
+    ],
+    "string": "Button"
+}

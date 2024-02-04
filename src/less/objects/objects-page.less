@@ -1,0 +1,34 @@
+.page {
+    margin-right: auto;
+    margin-left : auto;
+    .padding-h--xl;
+}
+@media (max-width: @xs-max-width) {
+    .page {
+        .padding-h--sm;
+    }
+}
+@media (min-width: @screen-tablet) {
+    .page {
+        max-width: @container-tablet;
+    }
+}
+@media (min-width: @screen-desktop) {
+    .page {
+        max-width: @container-desktop;
+    }
+}
+@media (min-width: @screen-lg-desktop) {
+    .page {
+        max-width: @container-lg-desktop;
+    }
+}
+@media (min-width: @screen-xl-desktop) {
+    .page.page--xl {
+        max-width: @container-xl-desktop;
+    }
+}
+
+.page--full-width {
+    max-width: 100%;
+}

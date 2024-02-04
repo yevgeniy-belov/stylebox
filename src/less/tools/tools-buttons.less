@@ -1,0 +1,74 @@
+.generate-button(@color) {
+	background-color: ~'var(--color-@{color})';
+	color: var(--color-opposite);
+	border: 1px solid ~'var(--color-@{color})';
+	&:hover,
+	&.hover,
+	&:focus,
+	&.focus {
+		color: var(--color-text-inverted-strongest);
+		background-color: ~'var(--color-@{color}-dark)';
+		border-color: ~'var(--color-@{color}-dark)';
+	}
+	&:active,
+	&.active {
+		color: var(--color-text-inverted-strongest);
+		border-color: ~'var(--color-@{color}-darker)';
+		background-color: ~'var(--color-@{color}-darker)';
+	}
+	&.btn--integrated {
+		background-color: ~'var(--color-@{color})';
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+			background-color: ~'var(--color-@{color}-dark)';
+		}
+		&:active,
+		&.active {
+			background-color: ~'var(--color-@{color}-darker)';
+		}
+	}
+	&.btn--wired {
+		color: ~'var(--color-@{color})';
+		.border;
+		border-color: ~'var(--color-@{color})';
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+			color: var(--color-text-inverted-strongest);
+			background-color: ~'var(--color-@{color}-dark)';
+			border-color: ~'var(--color-@{color}-dark)';
+		}
+		&:active,
+		&.active {
+			color: var(--color-text-inverted-strongest);
+			border-color: ~'var(--color-@{color}-darker)';
+			background-color: ~'var(--color-@{color}-darker)';
+		}
+	}
+	&.btn--silent {
+		color: ~'var(--color-@{color})';
+		&:hover,
+		&.hover,
+		&:focus,
+		&.focus {
+			color: var(--color-text-inverted-strongest);
+			border-color: ~'var(--color-@{color})';
+			background-color: ~'var(--color-@{color})';
+		}
+		&:active,
+		&.active {
+			color: var(--color-text-inverted-strongest);
+			border-color: ~'var(--color-@{color}-darker)';
+			background-color: ~'var(--color-@{color}-darker)';
+		}
+		&.open,
+		&.selected {
+			color: var(--color-text-inverted-strongest);
+			border-color: ~'var(--color-@{color})';
+			background-color: ~'var(--color-@{color})';
+		}
+	}
+}

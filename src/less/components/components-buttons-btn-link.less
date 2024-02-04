@@ -1,0 +1,32 @@
+.btn-link {
+    color: @link-color;
+    font-weight: normal;
+    cursor: pointer;
+    &,
+    &:active,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: transparent;
+        // .shadow;
+    }
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: transparent;
+    }
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus {
+            color: @btn-link-disabled-color;
+            text-decoration: none;
+        }
+    }
+}

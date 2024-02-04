@@ -1,0 +1,89 @@
+<div class="container margin-t--xs" ng-class="{'margin-t--xl': kitMode.selected === 'production'}">
+   
+        <div ng-if="kitMode.selected === 'production'" ng-include="'kit/kit__page-header.tpl.html'"></div>
+        <div class="*padding--xs padding-t--xl" *ng-class="{'padding--xl': kitMode.selected === 'production'}">
+            <div class="grid grid--guttered--xs" ng-class="{'grid--guttered--xl': kitMode.selected === 'production'}">
+                <div class="grid__item">
+                    <div class="grid grid--auto-items grid--flex-1 grid--flexy-items" ng-include="'kit/kit__backgrounds.tpl.html'"></div>
+                </div>
+                <div class="grid__item">
+                    <div class="grid grid--guttered--xs grid--auto-items grid--flexy-items *grid--nowrap" ng-include="'kit/kit__buttons.tpl.html'"></div>
+                </div>
+                <div class="grid__item">
+                    <div class="grid">
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="grid grid--auto-items grid--flexy-items grid--nowrap" ng-include="'kit/kit__integrated-buttons.tpl.html'"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <div class="grid grid--guttered--xs" ng-include="'kit/kit__buttons-groups.tpl.html'"></div>
+                </div>
+                <div class="grid__item">
+                    <div class="navigation height--xs bg--primary navigation--main text--uppercase">
+                        <div class="navigation__item open">Home</div>
+                        <div class="navigation__item">Load Tests</div>
+                        <div class="navigation__item">Assets</div>
+                        <div class="navigation__item">Results</div>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <div class="grid grid--guttered--xs" ng-include="'kit/kit__progress-bars.tpl.html'"></div>
+                </div>
+                <div class="grid__item">
+                    <div class="grid grid--guttered--xs" ng-include="'kit/kit__lists.tpl.html'"></div>
+                </div>
+                <div class="grid__item col--sm--12">
+                    <div class="grid grid--guttered--lg grid--flex-1">
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="grid grid--guttered--xs" ng-include="'kit/kit__budges.tpl.html'"></div>
+                        </div>
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="grid *grid--guttered--xxl" ng-include="'kit/kit__forms.tpl.html'"></div>
+                        </div>
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="grid grid--guttered--xs" ng-include="'kit/kit__title-bars.tpl.html'"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item col--sm--12">
+                    <div class="grid grid--guttered--lg *rows grid--flex-1">
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="grid grid--guttered--xs" ng-include="'kit/kit__buttons-group.tpl.html'"></div>
+                        </div>
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="grid grid--guttered--xs" ng-include="'kit/kit__alerts.tpl.html'"></div>
+                        </div>
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="*grid--guttered--xs" ng-include="'kit/kit__dropdowns.tpl.html'"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item col--sm--12">
+                    <div class="grid grid--guttered--lg *rows grid--flex-1">
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="grid--guttered--lg" ng-include="'kit/kit__tabs.tpl.html'"></div>
+                        </div>
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="" ng-include="'main/stylebox-icons.tpl.html'"></div>
+                        </div>
+                        <div class="grid__item grid__item--grow-0">
+                            <div class="*grid--guttered--xs" ng-include="'kit/kit__icons-sizes.tpl.html'"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <div class="grid grid--guttered--xs" ng-include="'kit/kit__tables.tpl.html'"></div>
+                </div>
+                <div class="grid__item">
+                    <div class="grid grid--guttered--xl grid--flexy-items" ng-include="'kit/kit__modals.tpl.html'"></div>
+                </div>
+                <div class="grid__item grid__item--grow-0">
+                    <div class="grid grid--guttered--xs" ng-include="'kit/kit__typo.tpl.html'"></div>
+                </div>
+            </div>
+        </div>
+    
+    <select class="btn margin-v--xl" ng-model="kitMode.selected" ng-options="o as o for o in kitModes">
+    </select>
+</div>

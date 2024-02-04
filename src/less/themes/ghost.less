@@ -1,0 +1,99 @@
+@bg--ghost: rgba(0,0,0,0);
+.ghost {
+    &:not(:hover) {
+        .bg--primary,
+        .bg--aside,
+        .bg--canvas,
+        .bg--content,
+        .btn--integrated,
+        {
+            background-color: @bg--ghost;
+            .text-color--weakest;
+            .transition--xl;
+        }
+        .ghost__stroke{
+            *{
+                fill:none;
+                stroke: #888;
+            }
+        }
+        [class*="--alert"],
+        [class*="--error"],
+        [class*="--info"],
+        [class*="--primary"],
+        [class*="--secondary"],
+        [class*="--success"] {
+            background: @color--ghost-graphics;
+            .transition--xl;
+        }
+        .btn{
+            opacity: .5;
+            color: var(--color-text-inverted-weak);
+            .transition--xl;
+			.border;
+        }
+        .ghost__iframe{
+            opacity: .3;
+            -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+            filter: grayscale(100%);
+            .transition--xl;
+        }
+        [class*="icon-"] {
+            opacity: .3;
+            * {
+                .text-color--weakest;
+                .transition--xl;
+            }
+        }
+        &.widget {
+            box-shadow: 0 0 0 1px var(--color-border-weaker);
+            background-color: @bg--ghost;
+            // .transition--xl;
+        }
+        .ghost__hide{
+            display: none;
+        }
+        [class*="text-color-inverted-"]{
+            .text-color-inverted--weakest;
+            .transition--xl;
+        }
+        [class*="text-color-"],
+        a {
+            .text-color--weakest;
+            .transition--xl;
+        }
+        .shadow--xs{
+            box-shadow: 0 0 0 1px var(--color-border-weaker);
+            .transition--xl;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: var(--color-border-weakest);
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-border-weakest);
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: var(--color-border-weakest);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-border-weakest);
+        }
+        ::-webkit-scrollbar-thumb:active {
+            background: var(--color-border-weakest);
+        }
+        .widget__header--primary,
+        .widget__header--info,
+        .widget__header--error,
+        .widget__header--alert,
+        .widget__header--secondary,
+        .widget__header--standout,
+        .widget__header--success,
+        {
+            background-color: @bg--ghost;
+            .text-color--weakest;
+            .transition--xl;
+        }
+    }
+}

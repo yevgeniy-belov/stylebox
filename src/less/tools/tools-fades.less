@@ -1,0 +1,47 @@
+.fade(@color,@opacity){
+    @color-var: "color--@{color}"; 
+    --color-@{color}: rgba(red(@@color-var), green(@@color-var), blue(@@color-var), @opacity)
+
+}
+.fade--xxs{
+    -webkit-transition: all 0.2s;                  
+    -moz-transition: all 0.2s;                 
+    -o-transition: all 0.2s;   
+    -ms-transition: all 0.2s;          
+    transition: all 0.2s;
+}
+.fade--xs{
+    -webkit-transition: all 0.5s;                  
+    -moz-transition: all 0.5s;                 
+    -o-transition: all 0.5s;   
+    -ms-transition: all 0.5s;          
+    transition: all 0.5s;
+}
+.fade--sm{
+    -webkit-transition: all 1s;                  
+    -moz-transition: all 1s;                 
+    -o-transition: all 1s;   
+    -ms-transition: all 1s;          
+    transition: all 1s;
+}
+.fade--md{
+    -webkit-transition: all 2s;                  
+    -moz-transition: all 2s;                 
+    -o-transition: all 2s;   
+    -ms-transition: all 2s;          
+    transition: all 2s;
+}
+.fade--lg{
+    -webkit-transition: all 4s;                  
+    -moz-transition: all 4s;                 
+    -o-transition: all 4s;   
+    -ms-transition: all 4s;          
+    transition: all 4s;
+}
+.fade--xl{
+    -webkit-transition: all 1s;                  
+    -moz-transition: all 1s;                 
+    -o-transition: all 1s;   
+    -ms-transition: all 1s;          
+    transition: all 1s;
+}

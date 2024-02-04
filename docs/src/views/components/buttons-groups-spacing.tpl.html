@@ -1,0 +1,7 @@
+<div class="bg--content border height--xs flex margin-b--lg" ng-repeat="size in modularData.sizes">
+    <div class="buttons-group buttons-group--primary buttons-group--spacing--{{size}}">
+        <div class="btn btn--integrated" ng-class="{'active':$first}"  ng-repeat="icon in reusableContentData.icons">
+            <div class="icon-{{icon}}"></div>
+        </div>
+    </div>
+</div>

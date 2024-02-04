@@ -1,0 +1,234 @@
+@theme-brightness : "light";
+@font-size-base : @text--md;
+@color--aqua : #29ceff;
+@color--arctic-blue : #0b8eac;
+@color--turquoise : #3DDCCA;
+@color--secondary : #475659;
+@color--standout : #7425ad;
+@color--secondary : #475659;
+@color--warning : #ffb000;
+@color--info : @color--aqua;
+@text-color-inverted-strongest : white;
+/**/
+@text-color-success : var(--color-success);
+@text-color-error : var(--color-error);
+@text-color-secondary : @color--secondary;
+@text-color-alert : @color--warning;
+@text-color-standout : @color--standout;
+@text-color-neutral-vibrant : @color--standout;
+@text-color-info : darken(@color--aqua, 15%);
+//
+@text-color-inverted-active : rgba(255, 255, 255, 1);
+@color--hover-weak : var(--color-text-weak);
+@color--hover : var(--color-text-weaker);
+@color--pressed : var(--color-text-weakest);
+@color--active : var(--color-info-darker);
+@color--backdrop : var(--color-text-medium);
+@loader__circle-color : var(--color-canvas);
+@color--ghost-graphics : rgba(0, 0, 0, .3);
+@color-hint-message : rgba(255, 255, 255, .8);
+@marker-color : var(--color-primary);
+
+@success: {
+  name: success;
+  shades: true;
+  opacities: true;
+  h: 149;
+  s: 74;
+  l: 39;
+  a: 100;
+}
+
+@primary: {
+  name: primary;
+  shades: true;
+  opacities: true;
+  h: 210;
+  s: 100;
+  l: 45;
+  a: 100;
+}
+
+@warning: {
+  name: warning;
+  shades: true;
+  opacities: true;
+  h: 41;
+  s: 100;
+  l: 50;
+  a: 100;
+}
+
+@info: {
+  name: info;
+  shades: true;
+  opacities: true;
+  h: 194;
+  s: 100;
+  l: 58;
+  a: 100;
+}
+
+@secondary: {
+  name: secondary;
+  shades: true;
+  opacities: true;
+  h: 190;
+  s: 11;
+  l: 31;
+  a: 100;
+}
+
+@error: {
+  name: error;
+  shades: true;
+  opacities: true;
+  h: 340;
+  s: 100;
+  l: 45;
+  a: 100;
+}
+
+@standout: {
+  name: standout;
+  shades: true;
+  opacities: true;
+  h: 275;
+  s: 65;
+  l: 41;
+  a: 100;
+}
+
+@selected: {
+  name: selected;
+  shades: true;
+  opacities: true;
+  h: 194;
+  s: 100;
+  l: 58;
+  a: 50;
+}
+@content: {
+  name: content;
+  shades: true;
+  opacities: true;
+  h: 0;
+  s: 0;
+  l: 100;
+  a: 100;
+}
+@aside: {
+  name: aside;
+  shades: true;
+  opacities: true;
+  h: 0;
+  s: 0;
+  l: 95;
+  a: 100;
+}
+@canvas: {
+  name: canvas;
+  shades: true;
+  opacities: true;
+  h: 0;
+  s: 0;
+  l: 90;
+  a: 100;
+}
+@accent: {
+  name: accent;
+  shades: true;
+  opacities: true;
+  h: 275;
+  s: 65;
+  l: 41;
+  a: 100;
+}
+
+.var(@success);
+.var(@primary);
+.var(@warning);
+.var(@info);
+.var(@secondary);
+.var(@error);
+.var(@standout);
+.var(@selected);
+.var(@content);
+.var(@aside);
+.var(@canvas);
+.var(@accent);
+
+:root {
+    --mark-hue                       : 0;
+    --mark-saturation                : 0%;
+    --mark-lightness                 : 0%;
+    //
+    --surface-hue                    : 200;
+    --surface-saturation             : 50%;
+    --surface-lightness              : 100%;
+    //
+    --lightness-delta-content        : 0%;
+    --lightness-delta-aside          : -5%;
+    --lightness-delta-canvas         : -10%;
+    //
+    --l-content                      : calc(var(--surface-lightness) + var(--lightness-delta-content));
+    --l-aside                        : calc(var(--surface-lightness) + var(--lightness-delta-aside));
+    --l-canvas                       : calc(var(--surface-lightness) + var(--lightness-delta-canvas));
+    //
+    --color-engrave                  : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .1);
+    //
+    --color-text-active              : var(--color-text-strongest);
+    --color-pressed                  : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .2);
+    /**/
+    --color-hover-weak               : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .07);
+    --color-hover                    : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .1);
+    --color-hover-strong             : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .15);
+    /**/
+    --color-text-weakest             : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .5);
+    --color-text-weak                : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .6);
+    --color-text-medium              : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .7);
+    --color-text-strong              : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .8);
+    --color-text-strongest           : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .9);
+    /**/
+    --color-text-success             : var(--color-success);
+    --color-text-error               : var(--color-error);
+    --color-text-secondary           : @color--secondary;
+    --color-text-alert               : @color--warning;
+    --color-text-standout            : @color--standout;
+    --color-text-neutral-vibrant     : @color--standout;
+    --color-text-info                : darken(@color--aqua, 15%);
+    /**/
+    --color-text-inverted-weakest    : hsla(0,0%, 100%, .5);
+    --color-text-inverted-weak       : hsla(0,0%, 100%, .6);
+    --color-text-inverted-medium     : hsla(0,0%, 100%, .7);
+    --color-text-inverted-strong     : hsla(0,0%, 100%, .8);
+    --color-text-inverted-strongest  : hsla(0,0%, 100%, .9);
+    /**/
+
+    --color-border-weakest           : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .03);
+    --color-border-weaker            : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .04);
+    --color-border-weak              : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .06);
+    --color-border-medium            : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .09);
+    --color-border                   : var(--color-border-medium);
+    --color-border-strong            : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .14);
+    --color-border-stronger          : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .21);
+    --color-border-strongest         : hsla(var(--mark-hue), var(--mark-saturation), var(--mark-lightness), .32);
+    /**/
+    --color-border-inverted-weakest  : hsla(var(--mark-hue), var(--mark-saturation), 100%, .04);
+    --color-border-inverted-weaker   : hsla(var(--mark-hue), var(--mark-saturation), 100%, .06);
+    --color-border-inverted-weak     : hsla(var(--mark-hue), var(--mark-saturation), 100%, .09);
+    --color-border-inverted-medium   : hsla(var(--mark-hue), var(--mark-saturation), 100%, .14);
+    --color-border-inverted-strong   : hsla(var(--mark-hue), var(--mark-saturation), 100%, .2);
+    --color-border-inverted-stronger : hsla(var(--mark-hue), var(--mark-saturation), 100%, .3);
+    --color-border-inverted-strongest: hsla(var(--mark-hue), var(--mark-saturation), 100%, .45);
+    /**/
+    --color-text-inverted-active     : rgba(255, 255, 255, 1);
+    --color-text-opposite            : white;
+    --color-opposite                 : white;
+    --link-color                     : var(--color-info-darker);
+    --color-active                   : var(--color-selected-opacity-medium);
+    /**/
+    --color-accent                   : var(--color-primary);
+    --color-vibrant                  : @color--turquoise;
+    --color--content-charts          :white;
+}

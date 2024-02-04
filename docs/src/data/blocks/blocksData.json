@@ -1,0 +1,429 @@
+{
+    "text": {
+        "blockName": "text",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "text--",
+                "options": [
+                    "default",
+                    "xxs",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                    "xxl",
+                    "3xl",
+                    "4xl",
+                    "5xl"
+                ]
+            },
+            "weights": {
+                "defaultChoice": "default",
+                "prefix": "font--",
+                "options": [
+                    "thin",
+                    "light",
+                    "regular",
+                    "medium",
+                    "semibold",
+                    "bold",
+                    "black"
+                ]
+            },
+            "power": {
+                "defaultChoice": "default",
+                "prefix": "text-color-",
+                "options": [
+                    "weakest",
+                    "weak",
+                    "medium",
+                    "strong",
+                    "strongest"
+                ]
+            }
+        }
+    },
+    "button": {
+        "blockName": "btn",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "btn--",
+                "options": [
+                    "default",
+                    "xxs",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                    "xxl"
+                ]
+            },
+            "status": {
+                "defaultChoice": "default",
+                "prefix": "btn--",
+                "options": [
+                    "default",
+                    "primary",
+                    "success",
+                    "warning",
+                    "error",
+                    "info"
+                ]
+            },
+            "types": {
+                "defaultChoice": "default",
+                "prefix": "btn--",
+                "options": [
+                    "default",
+                    "silent",
+                    "outline",
+                    "wired",
+                    "integrated"
+                ]
+            }
+        }
+    },
+    "list": {
+        "blockName": "list",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "list--",
+                "options": [
+                    "default",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl"
+                ]
+            },
+            "power": {
+                "defaultChoice": "default",
+                "prefix": "list--",
+                "options": [
+                    "default",
+                    "primary",
+                    "accent",
+                    "secondary"
+                ]
+            },
+            "types": {
+                "defaultChoice": "default",
+                "prefix": "list--",
+                "options": [
+                    "default",
+                    "markers",
+                    "markers--end"
+                ]
+            }
+        }
+    },
+    "tab": {
+        "blockName": "tabs",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "tabs--",
+                "options": [
+                    "default",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl"
+                ]
+            },
+            "power": {
+                "defaultChoice": "default",
+                "prefix": "tabs--",
+                "options": [
+                    "default",
+                    "bottom-line",
+                    "secondary"
+                ]
+            },
+            "placement": {
+                "defaultChoice": "default",
+                "prefix": "tabs--",
+                "options": [
+                    "default",
+                    "integrated"
+                ]
+            },
+            "alignment": {
+                "defaultChoice": "default",
+                "prefix": "tabs--",
+                "options": [
+                    "default",
+                    "centered"
+                ]
+            }
+        }
+    },
+    "title-bar": {
+        "blockName": "title-bar",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "title-bar--",
+                "options": [
+                    "default",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl"
+                ]
+            },
+            "power": {
+                "defaultChoice": "default",
+                "prefix": "title-bar--",
+                "options": [
+                    "default",
+                    "primary",
+                    "secondary",
+                    "tertiary",
+                    "content"
+                ]
+            }
+        }
+    },
+    "table": {
+        "blockName": "table",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "table--",
+                "options": [
+                    "default",
+                    "xxs",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg"
+                ]
+            },
+            "power": {
+                "defaultChoice": "default",
+                "prefix": "table--",
+                "options": [
+                    "primary",
+                    "secondary",
+                    "tertiary"
+                ]
+            },
+            "rows": {
+                "defaultChoice": "default",
+                "prefix": "tr--",
+                "options": [
+                    "default",
+                    "error"
+                ]
+            },
+            "borders": {
+                "defaultChoice": "default",
+                "prefix": "table--",
+                "options": [
+                    "default",
+                    "footerless",
+                    "vertical-lines",
+                    "bordered"
+                ]
+            },
+            "hover": {
+                "defaultChoice": "default",
+                "prefix": "table--",
+                "options": [
+                    "default",
+                    "hover-content",
+                    "hover"
+                ]
+            },
+            "miscellaneous": {
+                "defaultChoice": "default",
+                "prefix": "table--",
+                "options": [
+                    "default",
+                    "class-names",
+                    "condensed",
+                    "striped"
+                ]
+            },
+            "height": {
+                "defaultChoice": "default",
+                "prefix": "table--",
+                "options": [
+                    "default",
+                    "rows-height-xs",
+                    "rows-height-sm",
+                    "rows-height-md",
+                    "rows-height-lg",
+                    "rows-height-xl"
+                ]
+            },
+            "header": {
+                "defaultChoice": "default",
+                "prefix": "table--",
+                "options": [
+                    "default",
+                    "header--error",
+                    "header--warning",
+                    "header--info",
+                    "header--success",
+                    "header--primary"
+                ]
+            }
+        }
+    },
+    "buttons-group": {
+        "blockName": "buttons-group",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "buttons-group--",
+                "options": [
+                    "default",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                    "xxl"
+                ]
+            },
+            "power": {
+                "defaultChoice": "default",
+                "prefix": "buttons-group--",
+                "options": [
+                    "primary",
+                    "secondary",
+                    "accent",
+                    "tertiary"
+                ]
+            },
+            "spacing": {
+                "defaultChoice": "default",
+                "prefix": "buttons-group--spacing--",
+                "options": [
+                    "default",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl"
+                ]
+            },
+            "miscellaneous": {
+                "defaultChoice": "default",
+                "prefix": "buttons-group--",
+                "options": [
+                    "default",
+                    "separated",
+                    "inverted"
+                ]
+            }
+        }
+    },
+    "icon": {
+        "blockName": "icon",
+        "properties": {
+            "name": {
+                "defaultChoice": "ok",
+                "prefix": "icon-",
+                "options": [
+                    "ok",
+                    "delete",
+                    "settings",
+                    "error",
+                    "import",
+                    "folder"
+                ]
+            },
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "icon-size--",
+                "options": [
+                    "default",
+                    "8",
+                    "10",
+                    "12",
+                    "16",
+                    "20",
+                    "24",
+                    "32",
+                    "48",
+                    "64"
+                ]
+            },
+            "color": {
+                "defaultChoice": "default",
+                "prefix": "icon-color-",
+                "options": [
+                    "default",
+                    "primary",
+                    "success",
+                    "info",
+                    "error",
+                    "warning",
+                    "opposite",
+                    "weakest",
+                    "weak",
+                    "medium",
+                    "strong",
+                    "strongest"
+                ]
+            }
+        }
+    },
+    "shadow": {
+        "blockName": "shadow",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "shadow--",
+                "options": [
+                    "default",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl"
+                ]
+            },
+            "strongness": {
+                "defaultChoice": "default",
+                "prefix": "shadow--",
+                "options": [
+                    "default",
+                    "weaker",
+                    "weak",
+                    "medium",
+                    "strong",
+                    "stronger"
+                ]
+            }
+        }
+    },
+    "modal": {
+        "blockName": "modal",
+        "properties": {
+            "size": {
+                "defaultChoice": "default",
+                "prefix": "modal--",
+                "options": [
+                    "default",
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl"
+                ]
+            }
+        }
+    }
+}

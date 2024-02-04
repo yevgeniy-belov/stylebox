@@ -1,0 +1,63 @@
+<div class="flex flex-direction--column align-items--center" ng-init="proxyLabel = 'HTTP';securedproxyLabel = 'HTTPS'">
+	<div class="text--lg margin-b--sm">Change labels</div>
+	<div class="width--xl">
+		<input class="input width--100 margin-b--sm" type="text" maxlength="75" ng-model="proxyLabel">
+		<input class="input width--100" type="text" maxlength="75" ng-model="securedproxyLabel"> </div>
+</div>
+<br>
+<h4 class="text-center">.table--form</h4>
+<table class="table table--forms">
+	<tbody>
+		<tr>
+			<td>
+				<label>{{proxyLabel}}</label>
+			</td>
+			<td class="width--100">
+				<input type="text" class="input input--width-auto"> </td>
+			<td>Port</td>
+			<td class="min-width--sm">
+				<input type="text" class="input input--width-auto"> </td>
+		</tr>
+		<tr>
+			<td>
+				<label>{{securedproxyLabel}}</label>
+			</td>
+			<td>
+				<input type="text" class="input input--width-auto"> </td>
+			<td>Port</td>
+			<td>
+				<input type="text" class="input input--width-auto"> </td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<h4 class="text-center">Regular table</h4>
+<table class="table table--tertiary">
+	<thead>
+		<tr>
+			<th>Type</th>
+			<th class="width--100">Server</th>
+			<th class="min-width--sm">Port</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="white-space--nowrap">
+				<label>{{proxyLabel}}</label>
+			</td>
+			<td>
+				<input type="text" class="input width--100"> </td>
+			<td>
+				<input type="text" class="input width--100"> </td>
+		</tr>
+		<tr>
+			<td class="white-space--nowrap">
+				<label>{{securedproxyLabel}}</label>
+			</td>
+			<td>
+				<input type="text" class="input width--100"> </td>
+			<td>
+				<input type="text" class="input width--100 white-space--nowrap"> </td>
+		</tr>
+	</tbody>
+</table>

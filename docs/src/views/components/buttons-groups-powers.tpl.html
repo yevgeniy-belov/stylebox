@@ -1,0 +1,7 @@
+<div class="bg--aside height--xs flex margin-b--lg" ng-repeat="power in modularData.powers">
+    <div class="buttons-group buttons-group--{{power}} buttons-group--spacing--md">
+        <div class="btn btn--integrated" ng-class="{'active':$first}"  ng-repeat="icon in reusableContentData.icons">
+            <div class="icon-{{icon}}"></div>
+        </div>
+    </div>
+</div>

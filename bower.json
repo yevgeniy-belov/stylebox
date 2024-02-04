@@ -1,0 +1,14 @@
+{
+  "name": "stylebox",
+  "dependencies": {
+    "angular": "1.5.8",
+    "ngclipboard": "~1.1.0",
+    "clipboard": "1.5.5"
+  },
+  "devDependencies": {
+    "angular-ui-router": "~0.2.18",
+    "angular-highlightjs": "~0.6.1",
+    "angular-sanitize": "~1.4.8",
+    "ngstorage": "~0.3.10"
+  }
+}

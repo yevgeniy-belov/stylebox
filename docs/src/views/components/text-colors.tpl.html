@@ -1,0 +1,24 @@
+<div class="flex">
+	<div class="flex--1 text-colors-loop *text--xl  padding--xl">The early history of illustrated printed books is also the history of woodcut. Woodcut illustrations long predate the mid-fifteenth-century introduction of movable type to Germany. They were used extensively in the printing of textiles many hundreds
+		of years before in Europe and the Far East. Designs were cut in relief in wood, inked, then stamped onto fabric by hand. Woodcuts were also used in the production of playing cards, most notably in Augsburg. Prior to Gutenberg, woodcut or xylographic
+		books, including Ars Moriendi and the Cologne Chronicle, – where entire pages of text and illustration were carved in relief – have survived in relatively large numbers.*</div>
+	<div class="flex--1 text-colors-inverted-loop  bg--primary padding--xl">The early history of illustrated printed books is also the history of woodcut. Woodcut illustrations long predate the mid-fifteenth-century introduction of movable type to Germany. They were used extensively in the printing of textiles many hundreds
+		of years before in Europe and the Far East. Designs were cut in relief in wood, inked, then stamped onto fabric by hand. Woodcuts were also used in the production of playing cards, most notably in Augsburg. Prior to Gutenberg, woodcut or xylographic
+		books, including Ars Moriendi and the Cologne Chronicle, – where entire pages of text and illustration were carved in relief – have survived in relatively large numbers.*</div>
+</div>
+<div class="flex padding--xl">
+	<div class="flex--1" ng-repeat="color in typographyData.colors">
+		<div class="margin-b--sm text--capitalize">{{color}}</div>
+		<div class="margin-b--sm" ng-repeat="weight in typographyData.weights">
+			<div class="text--xl font--{{weight}} text--capitalize text-color-{{color}} text-block">Type</div>
+		</div>
+	</div>
+</div>
+<div class="flex bg--primary padding--xl">
+	<div class="flex--1" ng-repeat="color in typographyData.colors">
+		<div class="margin-b--sm text--capitalize text-color-inverted-medium">{{color}}</div>
+		<div class="margin-b--sm" ng-repeat="weight in typographyData.weights">
+			<div class="text--xl font--{{weight}} text--capitalize text-color-inverted-{{color}} text-block">Type</div>
+		</div>
+	</div>
+</div>

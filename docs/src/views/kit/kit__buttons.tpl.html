@@ -1,0 +1,11 @@
+
+<div class="grid__item" ng-repeat="type in buttonsData.types">
+    <div class="grid grid--flexy-items grid--guttered--xs grid--auto-items">
+        <div class="grid__item" ng-repeat="power in buttonsData.powers">
+            <div class="grid flex-direction--column grid--flexy-items grid--nowrap grid--guttered--xs grid--auto-items">
+                <div class="grid__item" ng-repeat="state in buttonsData.states">
+                <div class="btn {{state}} btn--{{power}} btn--{{type}}">Button</div>
+            </div>
+        </div>
+    </div>
+</div>

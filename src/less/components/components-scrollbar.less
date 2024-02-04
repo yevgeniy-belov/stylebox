@@ -1,0 +1,50 @@
+::-webkit-scrollbar {
+    width : @gap--xs;
+    height: @gap--xs;
+    // .scrollbar--xs&{
+    //     width : 4px;
+    //     height: 4px;
+    // }
+    // .scrollbar--sm&{
+    //     width : 6px;
+    //     height: 6px;
+    // }
+}
+/* Track */
+ ::-webkit-scrollbar-track {
+    background: var(--color-border-weaker);
+    // margin: 5px 0;
+    // border-radius: 1em;
+}
+/* Handle */
+ ::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    // border-radius: 1em;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: var(--color-border-weaker);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-stronger);
+}
+::-webkit-scrollbar-thumb:active {
+    background: var(--color-border-strongest);
+}
+
+// /* Track */
+//  ::-webkit-scrollbar-track {
+//     background: fade(var(--color-border-strong)est, 5%);
+// }
+// /* Handle */
+//  ::-webkit-scrollbar-thumb {
+//     background: fade(var(--color-border-strong)est, 20%);
+// }
+// ::-webkit-scrollbar-thumb:window-inactive {
+//     background: fade(var(--color-border-strong)est, 20%);
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//     background: fade(var(--color-border-strong)est, 30%);
+// }
+// ::-webkit-scrollbar-thumb:active {
+//     background: fade(var(--color-border-strong)est, 40%);
+// }

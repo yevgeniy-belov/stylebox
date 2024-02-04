@@ -1,0 +1,227 @@
+[class*="icon-"] {
+    font-size  : 16px;
+    line-height: 0;
+}
+.btn--success {
+    &:hover {
+        .icon-color--inverted {
+            color: var(--color-text-inverted-strongest) !important;
+        }
+    }
+}
+.btn.btn .icon-size--8,
+.icon-size--8 {
+    font-size: 8px;
+}
+.btn.btn .icon-size--10,
+.icon-size--10 {
+    font-size: 10px;
+}
+.btn.btn .icon-size--12,
+.icon-size--12 {
+    font-size: 12px;
+}
+.btn.btn .icon-size--14,
+.icon-size--14 {
+    font-size: 14px;
+}
+.btn.btn .icon-size--16,
+.icon-size--16 {
+    font-size: 16px;
+}
+.btn.btn .icon-size--20,
+.icon-size--20 {
+    font-size: 20px;
+}
+.btn.btn .icon-size--24,
+.icon-size--24 {
+    font-size: 24px;
+}
+.btn.btn .icon-size--32,
+.icon-size--32 {
+    font-size: 32px;
+}
+.btn.btn .icon-size--48,
+.icon-size--48 {
+    font-size: 48px;
+}
+.btn.btn .icon-size--64,
+.icon-size--64 {
+    font-size: 64px;
+}
+.btn {
+    .icon--labeled {
+        .margin-r--xs;
+        .align-self--center;
+    }
+}
+.tool-bar__item-label {
+    margin-left: 5px;
+}
+.icon-color-primary {
+    color: var(--color-primary);
+}
+.icon-color-success {
+    color: var(--color-success);
+}
+.icon-color-info {
+    color: var(--color-info);
+}
+.icon-color-accent {
+    color: var(--color-accent);
+}
+.icon-disc-yes,
+.icon-ok {
+    color: var(--color-success);
+}
+.icon-disc-no,
+.icon-error {
+    color: var(--color-error);
+}
+.icon-halted{
+    color: var(--color-standout);
+}
+.icon-color-weakest {
+    &[class*="icon-"] {
+        color: var(--color-text-weakest);
+    }
+}
+.icon-color-weak {
+    &[class*="icon-"] {
+        color: var(--color-text-weak);
+    }
+}
+.icon-color-medium {
+    &[class*="icon-"] {
+        .text-color--medium;
+    }
+}
+.icon-color-strong {
+    .text-color--strong;
+}
+.icon-color-strongest {
+    .text-color--strongest;
+}
+
+.icon-disc-yes,
+.icon-ok {
+    color: var(--color-success);
+}
+.icon-alert,
+.icon-color-warning {
+    color: var(--color-warning);
+}
+.btn--alert,
+.btn--error {
+    [class*=" icon-"],
+    [class^="icon-"] {
+        color: var(--color-text-inverted-medium);
+    }
+}
+.icon-color-error {
+    color: var(--color-error);
+}
+.icon-color-alert {
+    color: var(--color-warning);
+}
+.icon-color--inverted {
+    .icon-color--inverted-strong;
+}
+.icon-color--inverted-weakest {
+    color: var(--color-text-inverted-weakest);
+}
+.icon-color--inverted-weak {
+    color: var(--color-text-inverted-weak);
+}
+.icon-color--inverted-medium {
+    color: var(--color-text-inverted-medium);
+}
+.icon-color--inverted-strong {
+    color: var(--color-text-inverted-strong);
+}
+.icon-color--inverted-strongest {
+    color: var(--color-text-inverted-strongest);
+}
+.modified-icon {
+    .cols;
+}
+.modified-icon__modifier {
+    margin-right: -0.4em;
+    margin-left : 0.2em;
+    height      : 1em;
+    line-height : 0;
+}
+.modified-icon__icon {}
+.chevroned {
+    .flex;
+}
+.chevroned__chevron {
+    line-height: 1em;
+    .icon-down;
+    font-size  : 8px;
+    margin-left: 2px;
+}
+[class*="--primary"],
+[class*="--secondary"] {
+    .chevroned {
+        color: var(--color-text-inverted-stronger);
+    }
+}
+.btn {
+    .icon-color-accent {
+        color: var(--color-accent);
+        :hover& {
+            color: var(--color-accent-stronger)!important;
+        }
+    }
+}
+
+.disc-pillow--xs {
+    .radius--full;
+    padding   : 2px;
+    .bg--content;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+.triangle-pillow--xs {
+    border-radius: 0.1em;
+    padding      : 2px;
+    text-shadow  : 0 1px 0 #fff, -1px 0 0 #fff, 1px 0 0 #ffffff;
+}
+.icon-color--inverted-strongest {
+    color: var(--color-text-inverted-strongest);
+}
+.icon-size--20 {
+    font-size: @text--lg;
+}
+.icon-disc-ok--color-text-opposite {
+    .icon-disc-yes;
+    color: white !important; //TODO: remove the !important;
+}
+.icon-disc-no--color-text-opposite {
+    .icon-disc-no;
+    color: white !important; //TODO: remove the !important;
+}
+.icon-alert--color-text-opposite {
+    .icon-alert;
+    color: white !important; //TODO: remove the !important;
+}
+.icon--btn {
+    .transition--md;
+    display: inline-block;
+    color  : var(--color-secondary);
+    &:hover {
+        .text-color--strong;
+    }
+    &:active {
+        .text-color--strongest;
+    }
+    &.icon--silent {
+        color: rgba(0, 0, 0, 0.1);
+        &:hover {
+            color: var(--color-vibrant);
+        }
+        &:active {
+            color: var(--color-vibrant-stronger);
+        }
+    }
+}

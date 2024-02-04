@@ -1,0 +1,70 @@
+.pseudo-margins(@top, @bottom) {
+	&:before {
+		margin-top: @top * -1px;
+	}
+	&:after {
+		margin-bottom: @bottom * -1px;
+	}
+}
+.text-block {
+	.text-block__text {
+		margin-right: -0.05em;
+		margin-left: -0.05em;
+	}
+	line-height: 1.5em;
+	border: 1px solid transparent;
+	&.border {
+		border-color: @border-color;
+	}
+	&:before,
+	&:after {
+		display: block;
+		content: '';
+	}
+	&:before {
+		margin-top: -0.5em;
+	}
+	&:after {
+		margin-bottom: -0.5em;
+	}
+
+	&.text--xxs {
+		.pseudo-margins(5, 5);
+	}
+	&.text--xs {
+		.pseudo-margins(5, 5);
+	}
+	&.text--sm {
+		.pseudo-margins(6, 6);
+	}
+	&.text--md {
+		.pseudo-margins(6, 6);
+	}
+	&.text--lg {
+		.pseudo-margins(7, 7);
+	}
+	&.text--xl {
+		.pseudo-margins(9, 9);
+	}
+	&.text--xxl {
+		.pseudo-margins(10, 10);
+	}
+	&.text--3xl {
+		.pseudo-margins(13, 13);
+	}
+	&.text--4xl {
+		.pseudo-margins(18, 18);
+	}
+	&.text--5xl {
+		.pseudo-margins(24, 25);
+	}
+}
+a.text-block {
+	display: inline-block;
+	&.block {
+		.block;
+	}
+}
+.anchor--not-link {
+	color: initial;
+}

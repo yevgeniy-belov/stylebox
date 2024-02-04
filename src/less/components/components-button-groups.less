@@ -1,0 +1,191 @@
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  vertical-align: middle; // match .btn alignment given font-size hack above
+  > .btn {
+    position: relative;
+    float: left;
+    // Bring the "active" button to the front
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      z-index: 2;
+    }
+    &:focus {
+      // Remove focus outline when dropdown JS adds it after closing the menu
+      outline: none;
+    }
+  }
+}
+
+// Prevent double borders when buttons are next to each other
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -1px;
+  }
+  .active{
+    background-color: var(--color-primary);
+    color: var(--color-text-inverted-medium);
+    border-color: var(--color-primary);
+    box-shadow: none;
+  }
+}
+.btn-group--xs {
+    .btn {
+        .btn--xs;
+    }
+}
+
+.btn-group--sm {
+    .btn {
+        .btn--sm;
+    }
+}
+
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+
+// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group > .btn:first-child {
+  margin-left: 0;
+  &:not(:last-child):not(.dropdown-toggle) {
+    .border-right-radius(0);
+  }
+}
+// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+  .border-left-radius(0);
+}
+
+// Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
+.btn-group > .btn-group {
+  float: left;
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.btn-group > .btn-group:first-child {
+  > .btn:last-child,
+  > .dropdown-toggle {
+    .border-right-radius(0);
+  }
+}
+.btn-group > .btn-group:last-child > .btn:first-child {
+  // .border-left-radius(0);
+}
+
+// On active and open, don't show outline
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+
+.btn-group.open .dropdown-toggle {
+  background-color: rgba(0, 0, 0, 0.1);
+  &.btn--error{
+    .bg--error;
+  }
+  &.btn--alert{
+    .bg--alert;
+  }
+}
+
+
+// Reposition the caret
+.btn .caret {
+  margin-left: 0;
+}
+// Carets in other button sizes
+.btn-lg .caret {
+  border-width: @caret-width-large @caret-width-large 0;
+  border-bottom-width: 0;
+}
+// Upside down carets for .dropup
+.dropup .btn-lg .caret {
+  border-width: 0 @caret-width-large @caret-width-large;
+}
+
+// Checkbox and radio options
+[data-toggle="buttons"] > .btn > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+  display: none;
+}
+
+.btn-group.open{
+  .btn{
+    border-bottom-width: 0;
+    box-shadow: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .btn--integrated.dropdown-toggle{
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+.btn-group--integrated{
+  .btn--integrated{
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .flex;
+  .align-self--stretch;
+}
+.btn-group--secondary{
+  .btn.active{
+    .bg--secondary;
+  }
+}
+.btn-group--tertiary{
+  .btn.active{
+    &.btn--integrated{
+      background-color: rgba(0, 0, 0, 0.07);
+      .text-color-inverted--strongest;
+    }
+    .bg--tertiary;
+  }
+}
+.buttons-group--inverted{
+  .btn{
+    .text-color-inverted--strong;
+    &:hover,&.hover,&.open{
+	    .text-color-inverted--strongest;
+    }
+  }
+}
+.buttons-group--spacing--xs {
+  .btn {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+.buttons-group--spacing--sm {
+  .btn {
+    padding-left: 0.72em;
+    padding-right: 0.72em;
+  }
+}
+.buttons-group--spacing--md {
+  .btn {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+.buttons-group--spacing--lg {
+  .btn {
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+  }
+}
+.buttons-group--spacing--xl {
+  .btn {
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+  }
+}

@@ -1,0 +1,43 @@
+.hover--pointer {
+    &:hover {
+        cursor: pointer;
+    }
+}
+.on-hover--pop {
+    cursor: pointer;
+    &:hover {
+        .shadow--md;
+        &:active {
+            .shadow--xs;
+        }
+    }
+}
+.hover--flex--1 {
+    &:hover {
+        .flex--1;
+    }
+}
+.hover--width--100 {
+    flex-basis: 50px;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        transition: all 0.2s;
+    &:hover {
+        flex-basis: 60%;
+        -webkit-transition-timing-function: cubic-bezier(1,0.1,0.1,1);
+
+    }
+}
+.hover--darken--sm {
+	.relative;
+	&:hover{
+		&:after{
+			content: "";
+			z-index: 1;
+			.absolute-stretch;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.paper {
+    .transition--sm;
+	.bg--content;
+    outline: none;
+    // Prevents jumping in other states
+    border: 1px solid transparent;
+    //
+    // .shadow(xs, weaker);
+    .shadow--xs;
+    .shadow--weaker;
+    
+    cursor: default;
+    &:hover {
+        // .shadow(xs, default);
+        .shadow--xs;
+    .shadow--medium;
+        .bg--content;
+    }
+    &:focus {
+        // .shadow(sm, strong);
+        .shadow--sm;
+    .shadow--strong;
+        cursor: auto;
+        outline: none;
+    }
+    &:disabled {
+        .border;
+        box-shadow: none;
+        cursor: not-allowed;
+        background-color: transparent;
+        &:hover {
+            box-shadow: none;
+            background-color: transparent;
+        }
+        &:focus {
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+	&--silent{
+		background: transparent;
+        box-shadow: none;
+		&:hover{
+			.bg--content;
+		}
+        &:focus{
+			.bg--content;
+            .shadow--xs;
+		}
+	}
+}

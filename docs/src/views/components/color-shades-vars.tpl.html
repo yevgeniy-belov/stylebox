@@ -1,0 +1,21 @@
+<table class="table table--tertiary">
+    <thead>
+        <tr>
+            <th>Shade</th>
+            <th class="" ng-repeat="lightness in modularData.lightness" ng-init="colorName= lightness === '' ? 'Regular' : ''">
+                <div class="text--xxs">
+                    {{lightness}}{{colorName}}
+                </div>
+            </th>
+        </tr>
+    </thead>
+    <tbody class="">
+        <tr class="*bg--content" ng-repeat="color in modularData.colors">
+            <td class="*bg--aside">{{color}}</td>
+            <td class="relative  " ng-repeat="lightness in modularData.lightness" ng-init="hyphan= lightness === '' ? '' : '-'">
+                <div class="stretch absolute-stretch bg--{{color}} bg-lightness--{{lightness}}"></div>
+                <!-- <div class="stretch absolute-stretch" style="background-color: var(--color-{{color}}{{hyphan}}{{lightness}})"></div> -->
+            </td>
+        </tr>
+    </tbody>
+</table>

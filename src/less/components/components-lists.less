@@ -1,0 +1,445 @@
+.list {
+    display: block;
+    list-style-type: none;
+}
+.list__item, a.list__item{
+    a{
+        color: inherit;
+    }
+    list-style-type: none;
+    text-decoration: none;
+    .text-color--medium;
+    .text--md;
+    .list--inverted &{
+        color: var(--color-text-inverted-medium);
+    }
+    cursor: default;
+    padding-right: 0.7em;
+    padding-left: 0.7em;
+    .list--paddless & >{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    line-height: 2em;
+    .list:not(.list--no-selection) &{
+        &.selected, &:focus{
+            .bg--selected;
+        }
+    }
+    .list--hover &{
+        &:hover:not(.selected){
+            .bg--hover;
+            .text-color--active;
+            .list__item-icon{
+                .text-color--strong;
+            }
+            .list--inverted&{
+                color: var(--color-text-inverted-active);
+            }
+        }
+    }
+    .list:not(.list--no-selection) &{
+        &.selected{
+            .bg--selected;
+            .text-color--active;
+            .list--inverted &{
+                color: var(--color-text-inverted-active);
+            }
+            &:hover{
+                .list__item-icon{
+                    .text-color--strongest;
+                }
+            }
+        }
+    }
+}
+@import "components-lists-sizes";
+.list__item-check-icon{
+    .minor;
+    .centerize;
+    opacity: .2;
+    .selected & {
+        opacity: 1;
+    }
+}
+.list--icons {
+    .list__item {
+    .text-center;
+        padding: 0.5em;
+    }
+}
+.list--buttons {
+    .list__item {
+        .btn--integrated;
+    }
+}
+@list__item-head-width: 16px; //Icon width
+@list__item-label-head-width:  @gap--md;
+.list--tree{
+    padding-left: 0;
+    .list__item-indentator{
+        .flex--0;
+        .align-self--stretch;
+    }
+    .list__item--expanded,.list__item--collapsed{
+        .list__item-indentator {
+            width: 0;
+        }
+    }
+}
+
+.list__item--leaf .list__item-head {
+    opacity: .0001;
+    width: @list__item-head-width;
+}
+
+.list__item--leaf {
+    .list__item-label-head {
+        .flex--0;
+        .align-self--stretch;
+    }
+
+}
+
+.list__item--iconed {
+    .list__item-label-head {
+        .flex;
+        .flex--0;
+        .align-items--center;
+    }
+}
+
+.list__item-head {
+    .flex;
+    .flex--0;
+    cursor: default;
+    width : @list__item-head-width;
+    .icon-size--10;
+    .align-self--stretch;
+    .align-items--center;
+
+    .list__item--expanded & {
+        .icon-down-bold;
+    }
+
+    .list__item--collapsed & {
+        .icon-right-bold;
+    }
+}
+
+.list--tree {
+    .list__item {
+        .flex;
+        .align-items--center;
+        padding-left: 0;
+        .list--padding-l-xxs&{.padding-l--xxs;}
+        .list--padding-l-xs&{.padding-l--xs;}
+        .list--padding-l-sm&{.padding-l--sm;}
+        .list--padding-l-md&{.padding-l--md;}
+        .list--padding-l-lg&{.padding-l--lg;}
+        .list--padding-l-xl&{.padding-l--xl;}
+        .list--padding-l-xxl&{.padding-l--xxl;}
+    }
+    .list__item-label {
+        padding-left: .3em;
+        margin-left : 0;
+    }
+}
+.list--not-tree{
+    .list__item{
+        padding-right: 0.7em;
+        padding-left: 0.7em;
+    }
+}
+.list:not(.list--tree){
+    .list__item.expanded{
+        &:hover{
+            background: transparent;
+        }
+    }
+}
+.list__item{
+  &:hover {
+    .on-hover {
+       visibility: visible
+    }
+  }
+  .on-hover {
+     visibility: hidden
+  }
+}
+.list__item-content{
+    .block;
+}
+.list--style-disc{
+    .list__item{
+        list-style: disc;
+    }
+}
+.list__item-icon{
+    .text-color--medium;
+    .selected &{
+        .text-color--strongest;
+    }
+}
+.list__section{
+    .padding-v--xs;
+    .list--separated-sections &{
+        & + .list__section{
+            .border--t;
+        }
+    }
+}
+.list--primary{
+    .list__item{
+        &.selected, &:focus{
+            .bg--hover;
+    }
+    &.selected{
+        color: var(--color-opposite);
+            .bg--primary;
+        }
+    }
+}
+.list--accent{
+    .list__item{
+        &.selected, &:focus{
+            .bg--hover;
+    }
+    &.selected{
+        color: var(--color-opposite);
+            .bg--accent;
+        }
+    }
+}
+
+.list--markers{
+    .list__item.selected{
+        box-shadow: inset @marker-width 0 0 @marker-color;
+        .list--inverted&{
+            box-shadow: inset @marker-width 0 0 var(--color-text-inverted-strongest);
+        }
+		&.status--warning{
+	        box-shadow: inset @marker-width 0 0 @color--warning;
+		}
+    }
+}
+.list__item-icon {
+	.flex--0;
+    &:before {
+        width: 1em;
+        text-align: center;
+    }
+    .align-self--center;
+    .list--icons-24 & {
+        .icon-size--24;
+        .margin-v--sm;
+    }
+}
+.list__item-label {
+    .align-self--center;
+    .margin-l--sm;
+	.flex--1;
+	.ellipsis;
+}
+
+.list__item-notification{
+	.minor;
+	.bg--alert;
+	.align-self--center;
+	.padding--xs;
+	.radius--full;
+	.centerize;
+	&:hover{
+	.status--warning &{
+			background-color: darken(@color--warning, 15%);
+		}
+	}
+	[class*=icon-]{
+		.icon-size--10;
+		.icon-color--inverted;
+	}
+}
+.list--markers--end {
+    .list__item {
+        &.selected {
+            box-shadow: inset -@marker-width 0 0 @marker-color;
+        }
+		&.status--warning{
+	        box-shadow: inset -@marker-width 0 0 @color--warning;
+		}
+    }
+}
+.list--blocks{
+    .list__item{
+        display: block;
+    }
+}
+.list--padded--auto{
+    .list__item{
+        padding-right: 0.7em;
+        padding-left: 0.7em;
+    }
+    &.list--markers{
+        .list__item{
+            padding-left: ~"calc(0.7em + 5px)";
+        }
+    }
+}
+.list--padded--xs{
+    .list__item{
+        padding-right: @gap--xs;
+        padding-left: @gap--xs;
+    }
+}
+.list--padded--sm{
+    .list__item{
+        padding-right: @gap--sm;
+        padding-left: @gap--sm;
+    }
+}
+.list--padded--md{
+    .list__item{
+        padding-right: @gap--md;
+        padding-left: @gap--md;
+    }
+}
+.list--padded--lg{
+    .list__item{
+        padding-right: @gap--lg;
+        padding-left: @gap--lg;
+    }
+}
+.list--padded--xl{
+    .list__item{
+        padding-right: @gap--xl;
+        padding-left: @gap--xl;
+    }
+}
+
+
+.this-items--bordered {
+    > *{
+        .border--b;
+    }
+}
+.list--hover {
+    .list__item{
+        &:hover, &.hover{
+            &:not(.selected):not(.selected):not(.expanded){
+                .bg--hover;
+            }
+        }
+    }
+    &.list--primary{
+        .list__item{
+            &:hover:not(.selected):not(.selected){
+            .bg--hover;
+            }
+        }
+    }
+}
+.list__selector {
+    .bg--alert;
+    height: 2em;
+    .absolute;
+    .list &{
+        .relative;
+    }
+}
+.list--bg--selectable {
+    .list__item {
+        &.selected{
+            .bg--selected;
+            font-family: @font--base;
+        }
+    }
+}
+.this-items--selected--bold{
+    > *{
+        &.selected{
+            background: transparent;
+            font-family: @font--base;
+        }
+    }
+}
+.this-items--hover--text{
+    > *{
+        &:hover{
+            color: #0096d6;
+        }
+    }
+}
+.this-items--hover--pointer{
+    > *{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.list--agm-navigation-secondary{
+    .border--t;
+    .list;
+    .this-items--hover--text;
+    .this-items--hover--pointer;
+    .this-items--selected--bold;
+    .list--md;
+    .this-items--bordered;
+}
+.list--items-no-wrap{
+    .list__item{
+        white-space: nowrap;
+    }
+}
+
+@media @screen-width--md {
+    .width--sm__list--xs{
+        .list--xs;
+    }
+}
+@media @screen-width--md {
+    .width--md__list--md{
+        .list--md;
+    }
+    .width--md__list--lg{
+        .list--lg;
+    }
+    .width--md__list--xl{
+        .list--xl;
+    }
+}
+
+@media @screen-width--md{
+    .width--md__list--padded--xl{
+        .list__item{
+            padding-right: @gap--xl;
+            padding-left: @gap--xl;
+        }
+    }
+
+}
+.list--indented {
+  .list__item {
+    .padding-l--xl;
+  }
+}
+.list--flexy-items {
+    .list__item {
+        .flex;
+    }
+}
+.list--guided{
+    .list__item{
+        .border--l;
+    }
+}
+.list--items-paddless {
+    .list__item {
+        padding-right: 0;
+    }
+    &:not(.list--guided) {
+        .list__item {
+            padding-left: 0;
+        }
+    }
+}
