@@ -6,7 +6,5 @@
     "branch": "master",
     "commit": "45a8eb12838a11fc3cddc2e9e39a0d1fb091442d"
   },
-  "_source": "ssh://git@mydtbld0005.hpeswlab.net:7999/~belovy/stylebox.git",
-  "_target": "*",
-  "_originalSource": "ssh://git@mydtbld0005.hpeswlab.net:7999/~belovy/stylebox.git"
+  "_target": "*"
 }
